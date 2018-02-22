@@ -18,7 +18,7 @@
     2. ISP2 - Subnet 10.42.2.0/24
 
 # Physical Network Diagram
-![alt text](images/network-diagram.png "Network Diagram") Physical
+![alt text](images/network-diagram.png "Network Diagram")
 # Layer 3 Network Diagram
 ![alt text](images/network-diagram-l3.png "Layer 3 Network Diagram") 
 

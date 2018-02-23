@@ -1,0 +1,11 @@
+---
+- hosts: ios
+  gather_facts: no
+  connection: local
+  tasks:
+  - ios_command:
+       commands: 
+         - show run
+       host: "{{inventory_hostname}}"
+       user: network 
+       password: automation 

@@ -1,0 +1,32 @@
+remote-cs1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+main-r2 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+main-r1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+main-cs1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+main-cs2 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+remote-r1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+isp1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+isp2 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}

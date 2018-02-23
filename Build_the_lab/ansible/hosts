@@ -19,5 +19,6 @@ main-r2
 remote-r1
 
 [ios:vars]
+ansible_connection=local
 ansible_user=network
 ansible_ssh_pass=automation

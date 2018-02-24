@@ -1,11 +1,12 @@
 ---
 - hosts: ios
-  gather_facts: no
   connection: local
+  gather_facts: false
   tasks:
   - ios_command:
        commands: 
          - show run
-       host: "{{inventory_hostname}}"
-       user: network 
-       password: automation 
+    register: output
+  - copy:
+      content: "{{ output.stdout[0] }}"
+      dest: "./{{ inventory_hostname }}.configs" 

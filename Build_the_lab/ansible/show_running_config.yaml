@@ -9,4 +9,4 @@
     register: output
   - copy:
       content: "{{ output.stdout[0] }}"
-      dest: "./{{ inventory_hostname }}.configs" 
+      dest: "./pre-provision/{{ inventory_hostname }}.config" 

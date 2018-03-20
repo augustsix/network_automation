@@ -1,0 +1,12 @@
+---
+- hosts: ios
+  connection: local
+  gather_facts: false
+  tasks:
+  - ios_command:
+      commands: 
+        - "show cdp neighbor"
+    register: results 
+
+  - debug: var=results
+

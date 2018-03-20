@@ -1,0 +1,12 @@
+---
+- hosts: ios
+  connection: local
+  gather_facts: false
+  tasks:
+  - ios_command:
+       commands: 
+         - "show running-config | inc snmp-server community"
+    register: snmp_server_community
+
+  - debug: var=snmp_server_community
+

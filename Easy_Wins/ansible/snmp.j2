@@ -1,0 +1,4 @@
+{#  SNMP  #}
+{% for info in config['ro'] %}
+snmp-server community {{ info.community }} ro {{ info.acl }}
+{% endfor %}

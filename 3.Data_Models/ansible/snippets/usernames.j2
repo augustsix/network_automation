@@ -1,0 +1,4 @@
+! USERNAMES
+{% for user in config %}
+username {{ user.name }} privilege {{ user.priv }} password {{ user.password }}
+{% endfor %}

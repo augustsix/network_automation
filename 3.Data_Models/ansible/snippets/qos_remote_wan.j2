@@ -1,0 +1,52 @@
+! REMOTE WAN QOS
+class-map match-all VOICE_CALL_SIGNALING
+ match ip dscp cs3 
+class-map match-any NETWORK_MANAGEMENT
+ match protocol ssh
+ match protocol snmp
+class-map match-all NETWORK_CONTROL
+ match ip dscp cs6 
+class-map match-all VOICE_PAYLOAD
+ match ip dscp ef 
+class-map match-any BAZOOKA
+ match access-group name BAZOOKA
+class-map match-any VOICE_SIGNALING
+ match protocol sip
+ match protocol h323
+ match protocol mgcp
+ match protocol skinny
+class-map match-any RTP_AUDIO
+ match protocol rtp audio 
+
+policy-map WAN_EDGE_QOS
+ class VOICE_PAYLOAD
+  priority percent 30
+ class NETWORK_CONTROL
+  bandwidth percent 2 
+ class VOICE_CALL_SIGNALING
+  bandwidth percent 5 
+ class BAZOOKA
+  bandwidth percent 50 
+ class NETWORK_MANAGEMENT
+  bandwidth percent 5 
+ class class-default
+  fair-queue
+  random-detect
+
+policy-map MARK_INGRESS
+ class RTP_AUDIO
+  set dscp ef
+ class VOICE_SIGNALING
+  set dscp ef
+
+{% for provider in config['providers'] %}
+policy-map {{ provider.name|upper }}_EDGE_SHAPE
+ class class-default
+  shape average {{ provider.bw }}
+   service-policy WAN_EDGE_QOS
+
+interface {{ provider.interface }}
+  bandwidth {{ provider.bw // 1000 }}
+  service policy ouput {{ provider.name|upper }}_EDGE_SHAPE
+{% endfor %}
+

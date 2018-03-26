@@ -1,0 +1,12 @@
+{#  SNMP  #}
+{% for info in config['ro'] %}
+snmp-server community {{ info.community }} ro {{ info.acl }}
+{% endfor %}
+{% for info in config['rw'] %}
+snmp-server community {{ info.community }} rw {{ info.acl }}
+{% endfor %}
+snmp-server enable traps
+snmp-server ifindex persist
+{% for server in config['trap_host'] %}
+snmp-server host {{ server.name }} {{ server.community }}
+{% endfor %}

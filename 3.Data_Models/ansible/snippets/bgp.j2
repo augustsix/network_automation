@@ -1,0 +1,54 @@
+! BGP
+router bgp {{ config['bgp_as'] }}
+ bgp router-id {{ config['router_id'] }}
+ bgp log-neighbor-changes
+{% for neighbor in config['bgp_neighbors'] %}
+ neighbor {{ neighbor.address }} remote-as {{ neighbor.as }}
+ neighbor {{ neighbor.address }} description {{ neighbor.name|upper }}
+ neighbor {{ neighbor.address }} timers 15 45
+ neighbor {{ neighbor.address }} activate
+ neighbor {{ neighbor.address }} send-community
+{% if config['bgp_as'] == neighbor.as %}
+ neighbor 10.126.1.2 next-hop-self
+{% endif %}
+{% if neighbor.route_map_in %}
+ neighbor {{ neighbor.address }} route-map {{ neighbor.name|upper }}_IN in
+{% endif %}
+{% if neighbor.route_map_out %}
+ neighbor {{ neighbor.address }} route-map {{ neighbor.name|upper }}_OUT out
+{% endif %}
+{% endfor %}
+ !
+ address-family ipv4
+{% for network in config['networks'] %}
+{% for net,mask in network.items() %}
+ network {{ net }} mask {{ mask }}
+{% endfor %}
+{% endfor %}
+{% for aggregate in config['aggregates'] %}
+{% for net,mask in aggregate.items() %}
+ aggregate-address {{ net }} {{ mask }}
+{% endfor %}
+{% endfor %}
+ exit-address-family
+
+ip bgp-community new-format
+
+ip as-path access-list 10 permit ^$
+
+ip prefix-list LOOPBACK seq 10 permit {{ config['router_id'] }}/32
+
+{% for neighbor in config['bgp_neighbors'] %}
+
+ip prefix-list {{ neighbor.name|upper }}_UPLINK seq 10 permit {{ neighbor.subnet }}/{{ neighbor.cidr }}
+
+route-map {{ neighbor.name|upper }}_OUT permit 10
+  match ip address prefix-list {{ neighbor.name|upper }}_UPLINK LOOPBACK
+
+route-map {{ neighbor.name|upper }}_OUT permit 20
+  match as-path 10
+
+route-map {{ neighbor.name|upper }}_IN permit 10
+ set local-preference {{ neighbor.local_pref }}
+{% endfor %}
+

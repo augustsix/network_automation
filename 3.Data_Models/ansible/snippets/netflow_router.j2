@@ -1,0 +1,16 @@
+flow exporter EXPORTER-1
+ description EXPORTS_TO_COLLECTOR
+{% for server in config['netflow_collectors'] %}
+{% if loop.index<3 %}
+ destination {{ server }}
+{% endif %}
+{% endfor %}
+ transport udp {{ config['port'] }}
+ export-protocol netflow-v5
+!
+!
+flow monitor FLOW-MONITOR-1
+ description USED TO MONITOR ipv4 TRAFFIC
+ exporter EXPORTER-1
+ record netflow ipv4 original-input
+

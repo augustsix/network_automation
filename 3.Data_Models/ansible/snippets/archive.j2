@@ -1,0 +1,10 @@
+! ARCHIVE
+archive
+ log config
+  logging enable
+  logging size 200
+  notify syslog contenttype plaintext
+  hidekeys
+ path tftp://{{ config['tftp_server'] }}/$h
+ write-memory
+

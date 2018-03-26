@@ -1,0 +1,13 @@
+  {% if interface.switchport %}
+  no switchport
+  {% endif %}
+  ip address {{ interface.address }} {{ interface.mask }}
+  {% if interface.dhcp %}
+  ip helper-address {{ interface.ad_server }}
+  {% endif %}
+  {% if interface.multicast %}
+  ip pim sparse-mode
+  {% endif %}
+  no ip redirects
+  no ip proxy-arp
+

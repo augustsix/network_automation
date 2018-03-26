@@ -1,0 +1,6 @@
+! INTERFACES
+{% for interface in config %}
+interface {{ interface.type}} {{ interface.number }}
+  description {{ interface.desc|upper }}
+  {% include interface.role+".j2" %}
+{% endfor %}

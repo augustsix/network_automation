@@ -1,0 +1,7 @@
+! PREFIX-LISTS
+{% for pf_list in config %}
+{% for net,mask in pf_list.networks %}
+ip prefix-list {{ pf_list.name|upper }} seq {{ loop.index*10 }} permit {{ net }}/{{ mask }}
+{% endfor %}}
+{% endfor %}}
+ 

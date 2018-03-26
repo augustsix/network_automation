@@ -1,0 +1,9 @@
+! NUMBERED ACLs
+{% for acl in config %}
+access-list {{ acl.num }} remark {{ acl.name }}
+  {% for line in acl.networks -%}
+    {% for net,mask in line.items() %}
+access-list {{ acl.num }} permit {{ net }} {{ mask }} any log
+    {% endfor %}
+  {% endfor %}
+{% endfor %}

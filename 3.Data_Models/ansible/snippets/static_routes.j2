@@ -1,0 +1,7 @@
+! STATIC ROUTES
+{% for route in config %}
+ip route {{ route.net }} {{ route.mask }} {{ route.next_hop -}}
+{% if route.name %}
+ name {{ route.name }}
+{% endif %} 
+{% endfor %} 

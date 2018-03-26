@@ -1,0 +1,17 @@
+! EIGRP
+{% for eigrp in config %}
+router eigrp {{ eigrp.process }}
+  eigrp router-id {{ eigrp.router_id }}
+  passive-interface default
+  {% for nopass in eigrp.routed_interfaces %}
+  no passive-interface {{ nopass }}
+  {% endfor %}
+  {% for network in eigrp.networks %}
+  {% for net,mask in network.items() %}
+  network {{ net }} {{ mask }}
+  {% endfor %}
+  {% endfor %}
+  {% if eigrp.bgp_as %}
+  redistribute bgp {{ eigrp.bgp_as }} route-map BGP_TO_EIGRP
+  {% endif %} 
+{% endfor %}

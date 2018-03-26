@@ -1,0 +1,4 @@
+! NXOS USERNAMES
+{% for user in config %}
+username {{ user.name }} {{ user.password }} role {{ user.role }}
+{% endfor %}

@@ -1,0 +1,8 @@
+! LOGGING
+logging buffered 16384 
+logging buffered 6
+logging trap 6
+logging source-interface loopback 0
+{% for server in config %}
+logging {{ server }}
+{% endfor %}

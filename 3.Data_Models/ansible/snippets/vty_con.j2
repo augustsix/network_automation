@@ -1,0 +1,12 @@
+line vty 0 15
+  logout-warning 5
+  session-limit 4
+  logging synchronous
+  access-class VTY_ACCESS in
+  exec-timeout 5 0
+  transport input ssh
+
+line con 0
+  exec-timeout 5 0
+!  login local
+

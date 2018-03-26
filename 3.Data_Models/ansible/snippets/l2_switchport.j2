@@ -1,0 +1,14 @@
+  switchport mode access
+  switchport access vlan {{ interface.vlan }}
+  spanning-tree portfast
+{% if interface.vlan %}  
+  switchport voice vlan {{ interface.vvlan }}
+  auto qos voip cisco-phone
+{% endif %}
+!# Port security based on NSA recommendations
+!   switchport port-security
+!   switchport port-security maximum 3
+!   switchport port-security maximum 2 vlan access
+!   switchport port-security maximum 1 vlan access  
+!   switchport port-security violation shutdown vlan
+

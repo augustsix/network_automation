@@ -1,0 +1,57 @@
+! START-MAIN
+no service pad
+service tcp-keepalives-in
+service tcp-keepalives-out
+service timestamps debug datetime msec localtime show-timezone
+service timestamps log datetime msec localtime
+service password-encryption
+service sequence-numbers
+
+no service tcp-small-servers
+no service udp-small-servers
+
+no ip domain-lookup
+ip domain-name {{ config['domain_name'] }}
+
+ip dhcp bootp ignore
+
+no ip finger
+no service config
+!
+hostname {{ config['hostname'] }}
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret {{ config['enable_secret'] }}
+{% if config['routing'] %}
+ip routing
+ip subnet-zero
+ip classless
+
+no ip source-route
+{% endif %}
+!
+{% if config['multicast'] %}
+ip multicast routing 
+ip pim rp-address {{ config['rp_address'] }}
+{% endif %}
+!
+
+{% for server in config['ntp_servers'] %}
+ntp server {{ server }}
+{% endfor %}
+
+clock timezone CST -6
+clock summer-time CDT recurring
+!
+no ip http secure-server
+no ip http server
+crypto key generate rsa general-keys modulus 2048
+ip ssh version 2
+ip ssh time-out 60
+ip ssh authentication-retries 3
+
+memory reserve critical 1000
+memory free low-watermark processor 10000
+

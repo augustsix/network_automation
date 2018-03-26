@@ -1,0 +1,7 @@
+! Named ACLs
+{% for acl in config %}
+ip access-list {{ acl.type }} {{ acl.name }}
+{% for entry in acl.networks %}
+  {{ entry.action }} {{ entry.protocol }} {{ entry.src_net }} {{ entry.src_port }} {{ entry.src_mask }} {{ entry.dst_net }} {{ entry.dst_mask }} {{ entry.dst_port }} log
+{% endfor %}
+{% endfor %}

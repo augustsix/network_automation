@@ -1,0 +1,9 @@
+! # IOS Based netflow configuration
+ip flow-export source {{config['source_interface'} }}
+ip flow-export version 5
+{% for server in config['netflow_collectors'] %}
+ip flow-export destination {{ server }} {{ config['port'] }}
+ip flow-top-talkers
+ top 20
+ sort-by bytes
+

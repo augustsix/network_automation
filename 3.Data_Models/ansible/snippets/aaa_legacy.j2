@@ -1,0 +1,19 @@
+! AAA 
+aaa new-model
+!
+!
+aaa group server radius coyoteradius
+ server-private {{ radius_server }} auth-port 1812 acct-port 1813 key {{ radius_key }}
+ 
+!
+aaa authentication login default group coyoteradius local
+aaa authentication login local_authen local
+aaa authorization exec default group coyoteradius local 
+aaa authorization console
+!
+!
+aaa session-id common
+
+
+
+ip radius source-interface {{ source_interface }}

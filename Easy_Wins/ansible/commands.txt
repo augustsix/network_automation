@@ -1,0 +1,7 @@
+
+passing different types of extra vars:
+ ansible-playbook -vvv deployConfig.yml --extra-vars "src=snmp.j2" --extra-vars "@snmp.yml"
+
+this did not work:
+ ansible-playbook -vvv deployConfig.yml --extra-vars "src=snmp.j2 @snmp.yml"
+

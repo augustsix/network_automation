@@ -1,3 +1,0 @@
-snmp:
-    ro:
-      - {community: "azxrgb", acl: ""}

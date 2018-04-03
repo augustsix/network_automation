@@ -3,5 +3,5 @@
   vars:
   - results: "{{inventory_dir}}/results"
   tasks:
-  - include: "read-{{src|default('device')}}.yml"
-  - include: "report-{{dst|default('text')}}.yml"
+  - include: "read-{{src|default('cisco-ios-facts')}}.yml"
+  - include: "report-{{dst|default('template')}}.yml"

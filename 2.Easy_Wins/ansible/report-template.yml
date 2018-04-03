@@ -1,0 +1,16 @@
+#
+# Generate "create report from a template" module
+#
+# Variables
+#   results - output directory
+#   fmt     - desired format
+#   dest    - destination file name
+#   report  - report type 
+---
+- set_fact: report_template_src_file="{{report}}-{{fmt}}.j2"
+- template:
+    src:  "{{report_template_src_file|default('uptime-text.j2')}}"
+    dest: "{{results}}/{{output|default('uptime.log')}}"
+  vars:
+    allhosts: "{{hostvars}}"
+  run_once: true

@@ -4,6 +4,7 @@
 ---
 # - name: Deploy a configuration snippet on Cisco IOS routers
 - hosts: all
+  gather_facts: false
   tasks: 
 #  - include_vars:
 #      file: snmp.yml 
@@ -16,6 +17,7 @@
 #
   - ios_config: 
       src:      "{{src}}"
-      host:     "{{ansible_host}}"
-      username: "{{ansible_user}}"
-      password: "{{ansible_ssh_pass}}"
+      timeout: 30
+#      host:     "{{ansible_host}}"
+#      username: "{{ansible_user}}"
+#      password: "{{ansible_ssh_pass}}"

@@ -1,12 +1,15 @@
 {% for host,facts in allhosts|dictsort %}
 <h1>{{facts.inventory_hostname}}</h1>
 {% for bgp_peer,bgp_peer_info in facts.napalm_bgp_neighbors.global.peers.items() %}
-<h2>BGP peer: {{bgp_peer}}</h2>
+<h3>BGP peer: {{bgp_peer}}</h3>
 <table>
   <tr>
-    <td>Local AS</td>
-    <td>{{bgp_peer_info.local_as}}</td>
+    <td>Local AS</td><td>{{bgp_peer_info.local_as}}</td>
+  </tr>
+  <tr>
     <td>Remote AS</td><td>{{bgp_peer_info.remote_as}}</td>
+  </tr>
+  <tr>  
     <td>Uptime</td><td>{{bgp_peer_info.uptime}}</td>
   </tr>
 </table>

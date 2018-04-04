@@ -8,8 +8,11 @@ Example:
 ansible-playbook generic-reporting.yml --extra-vars "src=napalm_bgp_facts" --extra-vars "output=napalm_bgp_report.log" --extra-vars "report=napalm_bgp" --extra-vars "fmt=text"
 
   src = task that gathers data
+
   output - output file name
+
   report = the template to apply - must be able to use the data from the src task
+
   fmt = type i.e. text, html, etc
 
 # What I have learned so far.

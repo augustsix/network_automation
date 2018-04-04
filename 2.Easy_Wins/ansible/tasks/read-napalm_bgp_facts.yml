@@ -1,0 +1,8 @@
+---
+- napalm_get_facts:
+    hostname={{ inventory_hostname }}
+    username={{ ansible_user }}
+    password={{ ansible_ssh_pass }}
+    dev_os=ios
+    filter='bgp_neighbors'
+

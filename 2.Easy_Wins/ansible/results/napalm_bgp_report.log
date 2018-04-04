@@ -1,0 +1,72 @@
+isp1
+  BGP peer: 10.42.1.6
+    Local AS: 1
+    Remote AS: 65102
+    Uptime: 1728000
+  BGP peer: 10.42.1.2
+    Local AS: 1
+    Remote AS: 65101
+    Uptime: 1728000
+isp2
+  BGP peer: 10.42.2.2
+    Local AS: 2
+    Remote AS: 65101
+    Uptime: 1728000
+  BGP peer: 10.42.2.6
+    Local AS: 2
+    Remote AS: 65102
+    Uptime: 1728000
+main-cs1
+  BGP peer: 10.10.0.1
+    Local AS: 65101
+    Remote AS: 65101
+    Uptime: 93600
+  BGP peer: 10.10.0.10
+    Local AS: 65101
+    Remote AS: 65101
+    Uptime: 93600
+main-cs2
+  BGP peer: 10.10.0.5
+    Local AS: 65101
+    Remote AS: 65101
+    Uptime: 93600
+  BGP peer: 10.10.0.9
+    Local AS: 65101
+    Remote AS: 65101
+    Uptime: 93600
+main-r1
+  BGP peer: 10.42.1.1
+    Local AS: 65101
+    Remote AS: 1
+    Uptime: 1641600
+  BGP peer: 10.10.0.2
+    Local AS: 65101
+    Remote AS: 65101
+    Uptime: 100800
+main-r2
+  BGP peer: 10.10.0.6
+    Local AS: 65101
+    Remote AS: 65101
+    Uptime: 100800
+  BGP peer: 10.42.2.1
+    Local AS: 65101
+    Remote AS: 2
+    Uptime: 1641600
+remote-cs1
+  BGP peer: 10.10.16.2
+    Local AS: 65102
+    Remote AS: 65102
+    Uptime: 97200
+remote-r1
+  BGP peer: 10.10.16.1
+    Local AS: 65102
+    Remote AS: 65102
+    Uptime: 100800
+  BGP peer: 10.42.1.5
+    Local AS: 65102
+    Remote AS: 1
+    Uptime: 1728000
+  BGP peer: 10.42.2.5
+    Local AS: 65102
+    Remote AS: 2
+    Uptime: 1728000

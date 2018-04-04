@@ -2,6 +2,10 @@
 passing different types of extra vars:
  ansible-playbook -vvv deployConfig.yml --extra-vars "src=snmp.j2" --extra-vars "@snmp.yml"
 
+ansible-playbook generic-reporting.yml --extra-vars "output=test.log" --extra-vars "report=templates/all" --extra-vars "fmt=text"
+
+ansible-playbook generic-reporting.yml --extra-vars "src=napalm_bgp_facts" --extra-vars "output=napalm_bgp_report.log" --extra-vars "report=templates/napalm-bgp" --extra-vars "fmt=text"
+
 this did not work:
  ansible-playbook -vvv deployConfig.yml --extra-vars "src=snmp.j2 @snmp.yml"
 

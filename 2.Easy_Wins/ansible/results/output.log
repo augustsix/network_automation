@@ -1,19 +1,19 @@
 <h1>isp1</h1>
-<h2>BGP peer: 10.42.1.6</h2>
-<table>
-  <tr>
-    <td>Local AS</td>
-    <td>1</td>
-    <td>Remote AS</td><td>65102</td>
-    <td>Uptime</td><td>1728000</td>
-  </tr>
-</table>
 <h2>BGP peer: 10.42.1.2</h2>
 <table>
   <tr>
     <td>Local AS</td>
     <td>1</td>
     <td>Remote AS</td><td>65101</td>
+    <td>Uptime</td><td>1728000</td>
+  </tr>
+</table>
+<h2>BGP peer: 10.42.1.6</h2>
+<table>
+  <tr>
+    <td>Local AS</td>
+    <td>1</td>
+    <td>Remote AS</td><td>65102</td>
     <td>Uptime</td><td>1728000</td>
   </tr>
 </table>
@@ -37,41 +37,41 @@
   </tr>
 </table>
 <h1>main-cs1</h1>
-<h2>BGP peer: 10.10.0.10</h2>
-<table>
-  <tr>
-    <td>Local AS</td>
-    <td>65101</td>
-    <td>Remote AS</td><td>65101</td>
-    <td>Uptime</td><td>90000</td>
-  </tr>
-</table>
 <h2>BGP peer: 10.10.0.1</h2>
 <table>
   <tr>
     <td>Local AS</td>
     <td>65101</td>
     <td>Remote AS</td><td>65101</td>
-    <td>Uptime</td><td>90000</td>
+    <td>Uptime</td><td>93600</td>
   </tr>
 </table>
-<h1>main-cs2</h1>
-<h2>BGP peer: 10.10.0.9</h2>
+<h2>BGP peer: 10.10.0.10</h2>
 <table>
   <tr>
     <td>Local AS</td>
     <td>65101</td>
     <td>Remote AS</td><td>65101</td>
-    <td>Uptime</td><td>90000</td>
+    <td>Uptime</td><td>93600</td>
   </tr>
 </table>
+<h1>main-cs2</h1>
 <h2>BGP peer: 10.10.0.5</h2>
 <table>
   <tr>
     <td>Local AS</td>
     <td>65101</td>
     <td>Remote AS</td><td>65101</td>
-    <td>Uptime</td><td>90000</td>
+    <td>Uptime</td><td>93600</td>
+  </tr>
+</table>
+<h2>BGP peer: 10.10.0.9</h2>
+<table>
+  <tr>
+    <td>Local AS</td>
+    <td>65101</td>
+    <td>Remote AS</td><td>65101</td>
+    <td>Uptime</td><td>93600</td>
   </tr>
 </table>
 <h1>main-r1</h1>
@@ -90,10 +90,19 @@
     <td>Local AS</td>
     <td>65101</td>
     <td>Remote AS</td><td>65101</td>
-    <td>Uptime</td><td>97200</td>
+    <td>Uptime</td><td>100800</td>
   </tr>
 </table>
 <h1>main-r2</h1>
+<h2>BGP peer: 10.10.0.6</h2>
+<table>
+  <tr>
+    <td>Local AS</td>
+    <td>65101</td>
+    <td>Remote AS</td><td>65101</td>
+    <td>Uptime</td><td>100800</td>
+  </tr>
+</table>
 <h2>BGP peer: 10.42.2.1</h2>
 <table>
   <tr>
@@ -101,15 +110,6 @@
     <td>65101</td>
     <td>Remote AS</td><td>2</td>
     <td>Uptime</td><td>1641600</td>
-  </tr>
-</table>
-<h2>BGP peer: 10.10.0.6</h2>
-<table>
-  <tr>
-    <td>Local AS</td>
-    <td>65101</td>
-    <td>Remote AS</td><td>65101</td>
-    <td>Uptime</td><td>97200</td>
   </tr>
 </table>
 <h1>remote-cs1</h1>
@@ -123,13 +123,13 @@
   </tr>
 </table>
 <h1>remote-r1</h1>
-<h2>BGP peer: 10.10.16.1</h2>
+<h2>BGP peer: 10.42.2.5</h2>
 <table>
   <tr>
     <td>Local AS</td>
     <td>65102</td>
-    <td>Remote AS</td><td>65102</td>
-    <td>Uptime</td><td>100800</td>
+    <td>Remote AS</td><td>2</td>
+    <td>Uptime</td><td>1728000</td>
   </tr>
 </table>
 <h2>BGP peer: 10.42.1.5</h2>
@@ -141,12 +141,12 @@
     <td>Uptime</td><td>1728000</td>
   </tr>
 </table>
-<h2>BGP peer: 10.42.2.5</h2>
+<h2>BGP peer: 10.10.16.1</h2>
 <table>
   <tr>
     <td>Local AS</td>
     <td>65102</td>
-    <td>Remote AS</td><td>2</td>
-    <td>Uptime</td><td>1728000</td>
+    <td>Remote AS</td><td>65102</td>
+    <td>Uptime</td><td>100800</td>
   </tr>
 </table>

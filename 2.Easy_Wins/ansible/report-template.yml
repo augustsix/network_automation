@@ -10,7 +10,7 @@
 - set_fact: report_template_src_file="templates/{{report}}-{{fmt}}.j2"
   when: report is defined and fmt is defined
 - template:
-    src:  "{{report_template_src_file|default('uptime-text.j2')}}"
+    src:  "{{report_template_src_file|default('report-text.j2')}}"
     dest: "{{results}}/{{output|default('output.log')}}"
   vars:
     allhosts: "{{hostvars}}"

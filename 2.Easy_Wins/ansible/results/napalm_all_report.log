@@ -1,0 +1,2895 @@
+ansible_check_mode: false
+ansible_playbook_python: /usr/bin/python3
+ansible_ssh_pass: automation
+ansible_user: network
+ansible_version:
+    full: 2.4.3.0
+    major: 2
+    minor: 4
+    revision: 3
+    string: 2.4.3.0
+fmt: text
+group_names:
+- ios
+groups:
+    all:
+    - main-r1
+    - main-r2
+    - main-cs1
+    - main-cs2
+    - remote-r1
+    - remote-cs1
+    - isp1
+    - isp2
+    ios:
+    - main-r1
+    - main-r2
+    - main-cs1
+    - main-cs2
+    - remote-r1
+    - remote-cs1
+    - isp1
+    - isp2
+    router:
+    - main-r1
+    - main-r2
+    - remote-r1
+    switch:
+    - main-cs1
+    - main-cs2
+    - remote-cs1
+    ungrouped: []
+inventory_dir: /home/chris/network_automation/2.Easy_Wins/ansible
+inventory_file: /home/chris/network_automation/2.Easy_Wins/ansible/hosts
+inventory_hostname: isp1
+inventory_hostname_short: isp1
+napalm_arp_table:
+-   age: 0.0
+    interface: FastEthernet0/0
+    ip: 10.42.1.1
+    mac: C2:01:07:28:00:00
+-   age: 116.0
+    interface: FastEthernet0/0
+    ip: 10.42.1.2
+    mac: 00:B8:46:96:2F:01
+-   age: 0.0
+    interface: FastEthernet0/1
+    ip: 10.42.1.5
+    mac: C2:01:07:28:00:01
+-   age: 7.0
+    interface: FastEthernet0/1
+    ip: 10.42.1.6
+    mac: C2:03:07:73:00:00
+napalm_bgp_neighbors:
+    global:
+        peers:
+            10.42.1.2:
+                address_family:
+                    ipv4:
+                        accepted_prefixes: 1
+                        received_prefixes: 1
+                        sent_prefixes: 6
+                description: ''
+                is_enabled: true
+                is_up: true
+                local_as: 1
+                remote_as: 65101
+                remote_id: 10.42.1.2
+                uptime: 1728000
+            10.42.1.6:
+                address_family:
+                    ipv4:
+                        accepted_prefixes: 3
+                        received_prefixes: 3
+                        sent_prefixes: 6
+                description: ''
+                is_enabled: true
+                is_up: true
+                local_as: 1
+                remote_as: 65102
+                remote_id: 10.42.2.6
+                uptime: 1728000
+        router_id: 10.42.1.5
+napalm_facts:
+    fqdn: isp1.isp1.net
+    hostname: isp1
+    interface_list:
+    - FastEthernet0/0
+    - FastEthernet0/1
+    - FastEthernet1/0
+    - Serial2/0
+    - Serial2/1
+    - Serial2/2
+    - Serial2/3
+    model: '3725'
+    os_version: 3700 Software (C3725-ADVENTERPRISEK9-M), Version 12.4(15)T14, RELEASE
+        SOFTWARE (fc2)
+    serial_number: FTX0945W0MY
+    uptime: 1808940
+    vendor: Cisco
+napalm_fqdn: isp1.isp1.net
+napalm_hostname: isp1
+napalm_interface_list:
+- FastEthernet0/0
+- FastEthernet0/1
+- FastEthernet1/0
+- Serial2/0
+- Serial2/1
+- Serial2/2
+- Serial2/3
+napalm_interfaces:
+    FastEthernet0/0:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: C2:01:07:28:00:00
+        speed: 10
+    FastEthernet0/1:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: C2:01:07:28:00:01
+        speed: 10
+    FastEthernet1/0:
+        description: ''
+        is_enabled: false
+        is_up: false
+        last_flapped: -1.0
+        mac_address: C2:01:07:28:00:10
+        speed: 100
+    Serial2/0:
+        description: ''
+        is_enabled: false
+        is_up: false
+        last_flapped: -1.0
+        mac_address: ''
+        speed: 2
+    Serial2/1:
+        description: ''
+        is_enabled: false
+        is_up: false
+        last_flapped: -1.0
+        mac_address: ''
+        speed: 2
+    Serial2/2:
+        description: ''
+        is_enabled: false
+        is_up: false
+        last_flapped: -1.0
+        mac_address: ''
+        speed: 2
+    Serial2/3:
+        description: ''
+        is_enabled: false
+        is_up: false
+        last_flapped: -1.0
+        mac_address: ''
+        speed: 2
+napalm_interfaces_counters:
+    FastEthernet0/0:
+        rx_broadcast_packets: 4
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: -1
+        rx_octets: 8165466
+        rx_unicast_packets: 115384
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 37891046
+        tx_unicast_packets: 345016
+    FastEthernet0/1:
+        rx_broadcast_packets: 30149
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: -1
+        rx_octets: 23421340
+        rx_unicast_packets: 134990
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 27357620
+        tx_unicast_packets: 286833
+    FastEthernet1/0:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: -1
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 0
+        tx_unicast_packets: 0
+    Serial2/0:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: -1
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 24
+        tx_unicast_packets: 1
+    Serial2/1:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: -1
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 24
+        tx_unicast_packets: 1
+    Serial2/2:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: -1
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 24
+        tx_unicast_packets: 1
+    Serial2/3:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: -1
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 24
+        tx_unicast_packets: 1
+napalm_lldp_neighbors: {}
+napalm_mac_address_table: []
+napalm_model: '3725'
+napalm_os_version: 3700 Software (C3725-ADVENTERPRISEK9-M), Version 12.4(15)T14, RELEASE
+    SOFTWARE (fc2)
+napalm_serial_number: FTX0945W0MY
+napalm_uptime: 1808940
+napalm_vendor: Cisco
+omit: __omit_place_holder__cddda67b7b9c402ea9373794d3cd78a8d3964a35
+output: napalm_all_report.log
+playbook_dir: /home/chris/network_automation/2.Easy_Wins/ansible
+report: all
+report_template_src_file: templates/all-text.j2
+src: napalm-facts
+
+ansible_check_mode: false
+ansible_playbook_python: /usr/bin/python3
+ansible_ssh_pass: automation
+ansible_user: network
+ansible_version:
+    full: 2.4.3.0
+    major: 2
+    minor: 4
+    revision: 3
+    string: 2.4.3.0
+fmt: text
+group_names:
+- ios
+groups:
+    all:
+    - main-r1
+    - main-r2
+    - main-cs1
+    - main-cs2
+    - remote-r1
+    - remote-cs1
+    - isp1
+    - isp2
+    ios:
+    - main-r1
+    - main-r2
+    - main-cs1
+    - main-cs2
+    - remote-r1
+    - remote-cs1
+    - isp1
+    - isp2
+    router:
+    - main-r1
+    - main-r2
+    - remote-r1
+    switch:
+    - main-cs1
+    - main-cs2
+    - remote-cs1
+    ungrouped: []
+inventory_dir: /home/chris/network_automation/2.Easy_Wins/ansible
+inventory_file: /home/chris/network_automation/2.Easy_Wins/ansible/hosts
+inventory_hostname: isp2
+inventory_hostname_short: isp2
+napalm_arp_table:
+-   age: 0.0
+    interface: FastEthernet0/0
+    ip: 10.42.2.1
+    mac: C2:02:07:64:00:00
+-   age: 56.0
+    interface: FastEthernet0/0
+    ip: 10.42.2.2
+    mac: 00:B8:46:EA:DC:01
+-   age: 0.0
+    interface: FastEthernet0/1
+    ip: 10.42.2.5
+    mac: C2:02:07:64:00:01
+-   age: 83.0
+    interface: FastEthernet0/1
+    ip: 10.42.2.6
+    mac: C2:03:07:73:00:01
+napalm_bgp_neighbors:
+    global:
+        peers:
+            10.42.2.2:
+                address_family:
+                    ipv4:
+                        accepted_prefixes: 1
+                        received_prefixes: 1
+                        sent_prefixes: 6
+                description: ''
+                is_enabled: true
+                is_up: true
+                local_as: 2
+                remote_as: 65101
+                remote_id: 10.42.2.2
+                uptime: 1728000
+            10.42.2.6:
+                address_family:
+                    ipv4:
+                        accepted_prefixes: 4
+                        received_prefixes: 4
+                        sent_prefixes: 6
+                description: ''
+                is_enabled: true
+                is_up: true
+                local_as: 2
+                remote_as: 65102
+                remote_id: 10.42.2.6
+                uptime: 1728000
+        router_id: 10.42.2.5
+napalm_facts:
+    fqdn: isp2.isp2.net
+    hostname: isp2
+    interface_list:
+    - FastEthernet0/0
+    - FastEthernet0/1
+    - FastEthernet1/0
+    - Serial2/0
+    - Serial2/1
+    - Serial2/2
+    - Serial2/3
+    model: '3725'
+    os_version: 3700 Software (C3725-ADVENTERPRISEK9-M), Version 12.4(15)T14, RELEASE
+        SOFTWARE (fc2)
+    serial_number: FTX0945W0MY
+    uptime: 1808940
+    vendor: Cisco
+napalm_fqdn: isp2.isp2.net
+napalm_hostname: isp2
+napalm_interface_list:
+- FastEthernet0/0
+- FastEthernet0/1
+- FastEthernet1/0
+- Serial2/0
+- Serial2/1
+- Serial2/2
+- Serial2/3
+napalm_interfaces:
+    FastEthernet0/0:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: C2:02:07:64:00:00
+        speed: 10
+    FastEthernet0/1:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: C2:02:07:64:00:01
+        speed: 10
+    FastEthernet1/0:
+        description: ''
+        is_enabled: false
+        is_up: false
+        last_flapped: -1.0
+        mac_address: C2:02:07:64:00:10
+        speed: 100
+    Serial2/0:
+        description: ''
+        is_enabled: false
+        is_up: false
+        last_flapped: -1.0
+        mac_address: ''
+        speed: 2
+    Serial2/1:
+        description: ''
+        is_enabled: false
+        is_up: false
+        last_flapped: -1.0
+        mac_address: ''
+        speed: 2
+    Serial2/2:
+        description: ''
+        is_enabled: false
+        is_up: false
+        last_flapped: -1.0
+        mac_address: ''
+        speed: 2
+    Serial2/3:
+        description: ''
+        is_enabled: false
+        is_up: false
+        last_flapped: -1.0
+        mac_address: ''
+        speed: 2
+napalm_interfaces_counters:
+    FastEthernet0/0:
+        rx_broadcast_packets: 33314
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: -1
+        rx_octets: 17981244
+        rx_unicast_packets: 111384
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 29578876
+        tx_unicast_packets: 298390
+    FastEthernet0/1:
+        rx_broadcast_packets: 30149
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: -1
+        rx_octets: 14511147
+        rx_unicast_packets: 78054
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 25692866
+        tx_unicast_packets: 268589
+    FastEthernet1/0:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: -1
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 0
+        tx_unicast_packets: 0
+    Serial2/0:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: -1
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 24
+        tx_unicast_packets: 1
+    Serial2/1:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: -1
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 24
+        tx_unicast_packets: 1
+    Serial2/2:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: -1
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 24
+        tx_unicast_packets: 1
+    Serial2/3:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: -1
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 24
+        tx_unicast_packets: 1
+napalm_lldp_neighbors: {}
+napalm_mac_address_table: []
+napalm_model: '3725'
+napalm_os_version: 3700 Software (C3725-ADVENTERPRISEK9-M), Version 12.4(15)T14, RELEASE
+    SOFTWARE (fc2)
+napalm_serial_number: FTX0945W0MY
+napalm_uptime: 1808940
+napalm_vendor: Cisco
+omit: __omit_place_holder__cddda67b7b9c402ea9373794d3cd78a8d3964a35
+output: napalm_all_report.log
+playbook_dir: /home/chris/network_automation/2.Easy_Wins/ansible
+report: all
+report_template_src_file: templates/all-text.j2
+src: napalm-facts
+
+ansible_check_mode: false
+ansible_playbook_python: /usr/bin/python3
+ansible_ssh_pass: automation
+ansible_user: network
+ansible_version:
+    full: 2.4.3.0
+    major: 2
+    minor: 4
+    revision: 3
+    string: 2.4.3.0
+fmt: text
+group_names:
+- ios
+- switch
+groups:
+    all:
+    - main-r1
+    - main-r2
+    - main-cs1
+    - main-cs2
+    - remote-r1
+    - remote-cs1
+    - isp1
+    - isp2
+    ios:
+    - main-r1
+    - main-r2
+    - main-cs1
+    - main-cs2
+    - remote-r1
+    - remote-cs1
+    - isp1
+    - isp2
+    router:
+    - main-r1
+    - main-r2
+    - remote-r1
+    switch:
+    - main-cs1
+    - main-cs2
+    - remote-cs1
+    ungrouped: []
+inventory_dir: /home/chris/network_automation/2.Easy_Wins/ansible
+inventory_file: /home/chris/network_automation/2.Easy_Wins/ansible/hosts
+inventory_hostname: main-cs1
+inventory_hostname_short: main-cs1
+napalm_arp_table:
+-   age: 106.0
+    interface: GigabitEthernet0/1
+    ip: 10.10.0.1
+    mac: 00:B8:46:96:2F:00
+-   age: 0.0
+    interface: GigabitEthernet0/1
+    ip: 10.10.0.2
+    mac: 00:B8:46:7E:03:01
+-   age: 0.0
+    interface: Vlan100
+    ip: 10.10.0.9
+    mac: 00:B8:46:7E:80:64
+-   age: 186.0
+    interface: Vlan100
+    ip: 10.10.0.10
+    mac: 00:B8:46:F8:80:64
+-   age: 0.0
+    interface: Vlan5
+    ip: 10.10.5.1
+    mac: 00:00:0C:9F:F0:05
+-   age: 0.0
+    interface: Vlan5
+    ip: 10.10.5.2
+    mac: 00:B8:46:7E:80:05
+-   age: 207.0
+    interface: Vlan5
+    ip: 10.10.5.3
+    mac: 00:B8:46:F8:80:05
+-   age: 29.0
+    interface: Vlan5
+    ip: 10.10.5.5
+    mac: 00:0C:29:AE:43:4B
+napalm_bgp_neighbors:
+    global:
+        peers:
+            10.10.0.1:
+                address_family:
+                    ipv4:
+                        accepted_prefixes: 4
+                        received_prefixes: 4
+                        sent_prefixes: 2
+                description: ''
+                is_enabled: true
+                is_up: true
+                local_as: 65101
+                remote_as: 65101
+                remote_id: 10.42.1.2
+                uptime: 158400
+            10.10.0.10:
+                address_family:
+                    ipv4:
+                        accepted_prefixes: 4
+                        received_prefixes: 4
+                        sent_prefixes: 4
+                description: ''
+                is_enabled: true
+                is_up: true
+                local_as: 65101
+                remote_as: 65101
+                remote_id: 10.10.5.3
+                uptime: 158400
+        router_id: 10.10.5.2
+napalm_facts:
+    fqdn: main-cs1.test-corp.com
+    hostname: main-cs1
+    interface_list:
+    - GigabitEthernet0/0
+    - GigabitEthernet0/2
+    - GigabitEthernet0/3
+    - GigabitEthernet0/1
+    - GigabitEthernet1/0
+    - GigabitEthernet1/1
+    - GigabitEthernet1/2
+    - GigabitEthernet1/3
+    - GigabitEthernet2/0
+    - GigabitEthernet2/1
+    - GigabitEthernet2/2
+    - GigabitEthernet2/3
+    - GigabitEthernet3/0
+    - GigabitEthernet3/1
+    - GigabitEthernet3/2
+    - GigabitEthernet3/3
+    - Vlan5
+    - Vlan100
+    model: IOSv
+    os_version: vios_l2 Software (vios_l2-ADVENTERPRISEK9-M), Version 15.2(4.0.55)E,
+        TEST ENGINEERING ESTG_WEEKLY BUILD, synced to  END_OF_FLO_ISP
+    serial_number: 9ANFJ03WQDM
+    uptime: 160260
+    vendor: Cisco
+napalm_fqdn: main-cs1.test-corp.com
+napalm_hostname: main-cs1
+napalm_interface_list:
+- GigabitEthernet0/0
+- GigabitEthernet0/2
+- GigabitEthernet0/3
+- GigabitEthernet0/1
+- GigabitEthernet1/0
+- GigabitEthernet1/1
+- GigabitEthernet1/2
+- GigabitEthernet1/3
+- GigabitEthernet2/0
+- GigabitEthernet2/1
+- GigabitEthernet2/2
+- GigabitEthernet2/3
+- GigabitEthernet3/0
+- GigabitEthernet3/1
+- GigabitEthernet3/2
+- GigabitEthernet3/3
+- Vlan5
+- Vlan100
+napalm_interfaces:
+    GigabitEthernet0/0:
+        description: MANAGEMENT
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:7E:03:00
+        speed: 1000
+    GigabitEthernet0/1:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:7E:03:01
+        speed: 1000
+    GigabitEthernet0/2:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:7E:03:02
+        speed: 1000
+    GigabitEthernet0/3:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:7E:03:03
+        speed: 1000
+    GigabitEthernet1/0:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:7E:03:04
+        speed: 1000
+    GigabitEthernet1/1:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:7E:03:05
+        speed: 1000
+    GigabitEthernet1/2:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:7E:03:06
+        speed: 1000
+    GigabitEthernet1/3:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:7E:03:07
+        speed: 1000
+    GigabitEthernet2/0:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:7E:03:08
+        speed: 1000
+    GigabitEthernet2/1:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:7E:03:09
+        speed: 1000
+    GigabitEthernet2/2:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:7E:03:0A
+        speed: 1000
+    GigabitEthernet2/3:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:7E:03:0B
+        speed: 1000
+    GigabitEthernet3/0:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:7E:03:0C
+        speed: 1000
+    GigabitEthernet3/1:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:7E:03:0D
+        speed: 1000
+    GigabitEthernet3/2:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:7E:03:0E
+        speed: 1000
+    GigabitEthernet3/3:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:7E:03:0F
+        speed: 1000
+    Vlan100:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:7E:80:64
+        speed: 1000
+    Vlan5:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:7E:80:05
+        speed: 1000
+napalm_interfaces_counters:
+    GigabitEthernet0/0:
+        rx_broadcast_packets: 99025
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 5
+        rx_octets: 20266606
+        rx_unicast_packets: 197889
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 29495326
+        tx_unicast_packets: 245482
+    GigabitEthernet0/1:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 4317
+        rx_multicast_packets: 0
+        rx_octets: 14944168
+        rx_unicast_packets: 98540
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 8544035
+        tx_unicast_packets: 98963
+    GigabitEthernet0/2:
+        rx_broadcast_packets: 25767
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 7
+        rx_octets: 3675180
+        rx_unicast_packets: 31658
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 41576456
+        tx_unicast_packets: 512020
+    GigabitEthernet0/3:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 6850911
+        tx_unicast_packets: 92381
+    GigabitEthernet1/0:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 6848686
+        tx_unicast_packets: 92376
+    GigabitEthernet1/1:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 6847796
+        tx_unicast_packets: 92374
+    GigabitEthernet1/2:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 6851801
+        tx_unicast_packets: 92383
+    GigabitEthernet1/3:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 6849131
+        tx_unicast_packets: 92377
+    GigabitEthernet2/0:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 6848241
+        tx_unicast_packets: 92375
+    GigabitEthernet2/1:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 6850021
+        tx_unicast_packets: 92379
+    GigabitEthernet2/2:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 6850021
+        tx_unicast_packets: 92379
+    GigabitEthernet2/3:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 6846906
+        tx_unicast_packets: 92372
+    GigabitEthernet3/0:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 6850021
+        tx_unicast_packets: 92379
+    GigabitEthernet3/1:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 6850466
+        tx_unicast_packets: 92380
+    GigabitEthernet3/2:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 6850911
+        tx_unicast_packets: 92381
+    GigabitEthernet3/3:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 6852246
+        tx_unicast_packets: 92384
+    Vlan100:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 2026758
+        rx_unicast_packets: 23258
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 2026582
+        tx_unicast_packets: 23260
+    Vlan5:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 18196402
+        rx_unicast_packets: 184072
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 9913694
+        tx_unicast_packets: 79384
+napalm_lldp_neighbors:
+    GigabitEthernet0/0:
+    -   hostname: main-cs2.test-corp.com
+        port: Gi0/0
+    GigabitEthernet0/2:
+    -   hostname: main-cs2.test-corp.com
+        port: Gi0/2
+napalm_mac_address_table:
+-   active: true
+    interface: Gi0/0
+    last_move: -1.0
+    mac: 00:0C:29:AE:43:4B
+    moves: -1
+    static: false
+    vlan: 5
+-   active: true
+    interface: Gi0/0
+    last_move: -1.0
+    mac: 00:0C:29:D7:0A:57
+    moves: -1
+    static: false
+    vlan: 5
+-   active: true
+    interface: Gi0/0
+    last_move: -1.0
+    mac: 00:B8:46:F8:80:05
+    moves: -1
+    static: false
+    vlan: 5
+-   active: true
+    interface: Gi0/0
+    last_move: -1.0
+    mac: 00:B8:46:F8:BE:00
+    moves: -1
+    static: false
+    vlan: 5
+-   active: true
+    interface: Gi0/0
+    last_move: -1.0
+    mac: 02:00:4C:4F:4F:50
+    moves: -1
+    static: false
+    vlan: 5
+-   active: true
+    interface: Gi0/2
+    last_move: -1.0
+    mac: 00:B8:46:F8:80:64
+    moves: -1
+    static: false
+    vlan: 100
+napalm_model: IOSv
+napalm_os_version: vios_l2 Software (vios_l2-ADVENTERPRISEK9-M), Version 15.2(4.0.55)E,
+    TEST ENGINEERING ESTG_WEEKLY BUILD, synced to  END_OF_FLO_ISP
+napalm_serial_number: 9ANFJ03WQDM
+napalm_uptime: 160260
+napalm_vendor: Cisco
+omit: __omit_place_holder__cddda67b7b9c402ea9373794d3cd78a8d3964a35
+output: napalm_all_report.log
+playbook_dir: /home/chris/network_automation/2.Easy_Wins/ansible
+report: all
+report_template_src_file: templates/all-text.j2
+src: napalm-facts
+
+ansible_check_mode: false
+ansible_playbook_python: /usr/bin/python3
+ansible_ssh_pass: automation
+ansible_user: network
+ansible_version:
+    full: 2.4.3.0
+    major: 2
+    minor: 4
+    revision: 3
+    string: 2.4.3.0
+fmt: text
+group_names:
+- ios
+- switch
+groups:
+    all:
+    - main-r1
+    - main-r2
+    - main-cs1
+    - main-cs2
+    - remote-r1
+    - remote-cs1
+    - isp1
+    - isp2
+    ios:
+    - main-r1
+    - main-r2
+    - main-cs1
+    - main-cs2
+    - remote-r1
+    - remote-cs1
+    - isp1
+    - isp2
+    router:
+    - main-r1
+    - main-r2
+    - remote-r1
+    switch:
+    - main-cs1
+    - main-cs2
+    - remote-cs1
+    ungrouped: []
+inventory_dir: /home/chris/network_automation/2.Easy_Wins/ansible
+inventory_file: /home/chris/network_automation/2.Easy_Wins/ansible/hosts
+inventory_hostname: main-cs2
+inventory_hostname_short: main-cs2
+napalm_arp_table:
+-   age: 118.0
+    interface: GigabitEthernet0/1
+    ip: 10.10.0.5
+    mac: 00:B8:46:EA:DC:00
+-   age: 0.0
+    interface: GigabitEthernet0/1
+    ip: 10.10.0.6
+    mac: 00:B8:46:F8:BE:01
+-   age: 186.0
+    interface: Vlan100
+    ip: 10.10.0.9
+    mac: 00:B8:46:7E:80:64
+-   age: 0.0
+    interface: Vlan100
+    ip: 10.10.0.10
+    mac: 00:B8:46:F8:80:64
+-   age: 207.0
+    interface: Vlan5
+    ip: 10.10.5.2
+    mac: 00:B8:46:7E:80:05
+-   age: 0.0
+    interface: Vlan5
+    ip: 10.10.5.3
+    mac: 00:B8:46:F8:80:05
+-   age: 29.0
+    interface: Vlan5
+    ip: 10.10.5.5
+    mac: 00:0C:29:AE:43:4B
+napalm_bgp_neighbors:
+    global:
+        peers:
+            10.10.0.5:
+                address_family:
+                    ipv4:
+                        accepted_prefixes: 4
+                        received_prefixes: 4
+                        sent_prefixes: 2
+                description: ''
+                is_enabled: true
+                is_up: true
+                local_as: 65101
+                remote_as: 65101
+                remote_id: 10.42.2.2
+                uptime: 158400
+            10.10.0.9:
+                address_family:
+                    ipv4:
+                        accepted_prefixes: 4
+                        received_prefixes: 4
+                        sent_prefixes: 4
+                description: ''
+                is_enabled: true
+                is_up: true
+                local_as: 65101
+                remote_as: 65101
+                remote_id: 10.10.5.2
+                uptime: 158400
+        router_id: 10.10.5.3
+napalm_facts:
+    fqdn: main-cs2.test-corp.com
+    hostname: main-cs2
+    interface_list:
+    - GigabitEthernet0/0
+    - GigabitEthernet0/2
+    - GigabitEthernet0/3
+    - GigabitEthernet0/1
+    - GigabitEthernet1/0
+    - GigabitEthernet1/1
+    - GigabitEthernet1/2
+    - GigabitEthernet1/3
+    - GigabitEthernet2/0
+    - GigabitEthernet2/1
+    - GigabitEthernet2/2
+    - GigabitEthernet2/3
+    - GigabitEthernet3/0
+    - GigabitEthernet3/1
+    - GigabitEthernet3/2
+    - GigabitEthernet3/3
+    - Vlan5
+    - Vlan100
+    model: IOSv
+    os_version: vios_l2 Software (vios_l2-ADVENTERPRISEK9-M), Version 15.2(4.0.55)E,
+        TEST ENGINEERING ESTG_WEEKLY BUILD, synced to  END_OF_FLO_ISP
+    serial_number: 9M2QNSG7IQ2
+    uptime: 159960
+    vendor: Cisco
+napalm_fqdn: main-cs2.test-corp.com
+napalm_hostname: main-cs2
+napalm_interface_list:
+- GigabitEthernet0/0
+- GigabitEthernet0/2
+- GigabitEthernet0/3
+- GigabitEthernet0/1
+- GigabitEthernet1/0
+- GigabitEthernet1/1
+- GigabitEthernet1/2
+- GigabitEthernet1/3
+- GigabitEthernet2/0
+- GigabitEthernet2/1
+- GigabitEthernet2/2
+- GigabitEthernet2/3
+- GigabitEthernet3/0
+- GigabitEthernet3/1
+- GigabitEthernet3/2
+- GigabitEthernet3/3
+- Vlan5
+- Vlan100
+napalm_interfaces:
+    GigabitEthernet0/0:
+        description: MANAGEMENT
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:F8:BE:00
+        speed: 1000
+    GigabitEthernet0/1:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:F8:BE:01
+        speed: 1000
+    GigabitEthernet0/2:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:F8:BE:02
+        speed: 1000
+    GigabitEthernet0/3:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:F8:BE:03
+        speed: 1000
+    GigabitEthernet1/0:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:F8:BE:04
+        speed: 1000
+    GigabitEthernet1/1:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:F8:BE:05
+        speed: 1000
+    GigabitEthernet1/2:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:F8:BE:06
+        speed: 1000
+    GigabitEthernet1/3:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:F8:BE:07
+        speed: 1000
+    GigabitEthernet2/0:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:F8:BE:08
+        speed: 1000
+    GigabitEthernet2/1:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:F8:BE:09
+        speed: 1000
+    GigabitEthernet2/2:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:F8:BE:0A
+        speed: 1000
+    GigabitEthernet2/3:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:F8:BE:0B
+        speed: 1000
+    GigabitEthernet3/0:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:F8:BE:0C
+        speed: 1000
+    GigabitEthernet3/1:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:F8:BE:0D
+        speed: 1000
+    GigabitEthernet3/2:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:F8:BE:0E
+        speed: 1000
+    GigabitEthernet3/3:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:F8:BE:0F
+        speed: 1000
+    Vlan100:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:F8:80:64
+        speed: 1000
+    Vlan5:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:F8:80:05
+        speed: 1000
+napalm_interfaces_counters:
+    GigabitEthernet0/0:
+        rx_broadcast_packets: 171981
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 1
+        rx_octets: 17483742
+        rx_unicast_packets: 188382
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 18130595
+        tx_unicast_packets: 134134
+    GigabitEthernet0/1:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 1652
+        rx_multicast_packets: 0
+        rx_octets: 9184873
+        rx_unicast_packets: 63616
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 6187191
+        tx_unicast_packets: 67887
+    GigabitEthernet0/2:
+        rx_broadcast_packets: 480754
+        rx_discards: 0
+        rx_errors: 20448
+        rx_multicast_packets: 4
+        rx_octets: 40370705
+        rx_unicast_packets: 506688
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 3768443
+        tx_unicast_packets: 31658
+    GigabitEthernet0/3:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 6849560
+        tx_unicast_packets: 92406
+    GigabitEthernet1/0:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 6847335
+        tx_unicast_packets: 92401
+    GigabitEthernet1/1:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 6849560
+        tx_unicast_packets: 92406
+    GigabitEthernet1/2:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 6848225
+        tx_unicast_packets: 92403
+    GigabitEthernet1/3:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 6848225
+        tx_unicast_packets: 92403
+    GigabitEthernet2/0:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 6847780
+        tx_unicast_packets: 92402
+    GigabitEthernet2/1:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 6848225
+        tx_unicast_packets: 92403
+    GigabitEthernet2/2:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 6847335
+        tx_unicast_packets: 92401
+    GigabitEthernet2/3:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 6851340
+        tx_unicast_packets: 92410
+    GigabitEthernet3/0:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 6845555
+        tx_unicast_packets: 92397
+    GigabitEthernet3/1:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 6847780
+        tx_unicast_packets: 92402
+    GigabitEthernet3/2:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 6850005
+        tx_unicast_packets: 92407
+    GigabitEthernet3/3:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 6849560
+        tx_unicast_packets: 92406
+    Vlan100:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 3971349
+        rx_unicast_packets: 48633
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 2027328
+        tx_unicast_packets: 23266
+    Vlan5:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 11242422
+        rx_unicast_packets: 95851
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 10229527
+        tx_unicast_packets: 84825
+napalm_lldp_neighbors:
+    GigabitEthernet0/0:
+    -   hostname: main-cs1.test-corp.com
+        port: Gi0/0
+    GigabitEthernet0/2:
+    -   hostname: main-cs1.test-corp.com
+        port: Gi0/2
+napalm_mac_address_table:
+-   active: true
+    interface: Gi0/0
+    last_move: -1.0
+    mac: 00:00:0C:9F:F0:05
+    moves: -1
+    static: false
+    vlan: 5
+-   active: true
+    interface: Gi0/0
+    last_move: -1.0
+    mac: 00:0C:29:AE:43:4B
+    moves: -1
+    static: false
+    vlan: 5
+-   active: true
+    interface: Gi0/0
+    last_move: -1.0
+    mac: 00:0C:29:D7:0A:57
+    moves: -1
+    static: false
+    vlan: 5
+-   active: true
+    interface: Gi0/0
+    last_move: -1.0
+    mac: 00:B8:46:7E:03:00
+    moves: -1
+    static: false
+    vlan: 5
+-   active: true
+    interface: Gi0/0
+    last_move: -1.0
+    mac: 00:B8:46:7E:80:05
+    moves: -1
+    static: false
+    vlan: 5
+-   active: true
+    interface: Gi0/0
+    last_move: -1.0
+    mac: 02:00:4C:4F:4F:50
+    moves: -1
+    static: false
+    vlan: 5
+-   active: true
+    interface: Gi0/2
+    last_move: -1.0
+    mac: 00:B8:46:7E:80:64
+    moves: -1
+    static: false
+    vlan: 100
+napalm_model: IOSv
+napalm_os_version: vios_l2 Software (vios_l2-ADVENTERPRISEK9-M), Version 15.2(4.0.55)E,
+    TEST ENGINEERING ESTG_WEEKLY BUILD, synced to  END_OF_FLO_ISP
+napalm_serial_number: 9M2QNSG7IQ2
+napalm_uptime: 159960
+napalm_vendor: Cisco
+omit: __omit_place_holder__cddda67b7b9c402ea9373794d3cd78a8d3964a35
+output: napalm_all_report.log
+playbook_dir: /home/chris/network_automation/2.Easy_Wins/ansible
+report: all
+report_template_src_file: templates/all-text.j2
+src: napalm-facts
+
+ansible_check_mode: false
+ansible_playbook_python: /usr/bin/python3
+ansible_ssh_pass: automation
+ansible_user: network
+ansible_version:
+    full: 2.4.3.0
+    major: 2
+    minor: 4
+    revision: 3
+    string: 2.4.3.0
+fmt: text
+group_names:
+- ios
+- router
+groups:
+    all:
+    - main-r1
+    - main-r2
+    - main-cs1
+    - main-cs2
+    - remote-r1
+    - remote-cs1
+    - isp1
+    - isp2
+    ios:
+    - main-r1
+    - main-r2
+    - main-cs1
+    - main-cs2
+    - remote-r1
+    - remote-cs1
+    - isp1
+    - isp2
+    router:
+    - main-r1
+    - main-r2
+    - remote-r1
+    switch:
+    - main-cs1
+    - main-cs2
+    - remote-cs1
+    ungrouped: []
+inventory_dir: /home/chris/network_automation/2.Easy_Wins/ansible
+inventory_file: /home/chris/network_automation/2.Easy_Wins/ansible/hosts
+inventory_hostname: main-r1
+inventory_hostname_short: main-r1
+napalm_arp_table:
+-   age: 0.0
+    interface: GigabitEthernet0/0
+    ip: 10.10.0.1
+    mac: 00:B8:46:96:2F:00
+-   age: 114.0
+    interface: GigabitEthernet0/0
+    ip: 10.10.0.2
+    mac: 00:B8:46:7E:03:01
+-   age: 115.0
+    interface: GigabitEthernet0/1
+    ip: 10.42.1.1
+    mac: C2:01:07:28:00:00
+-   age: 0.0
+    interface: GigabitEthernet0/1
+    ip: 10.42.1.2
+    mac: 00:B8:46:96:2F:01
+napalm_bgp_neighbors:
+    global:
+        peers:
+            10.10.0.2:
+                address_family:
+                    ipv4:
+                        accepted_prefixes: 2
+                        received_prefixes: 2
+                        sent_prefixes: 4
+                description: ''
+                is_enabled: true
+                is_up: true
+                local_as: 65101
+                remote_as: 65101
+                remote_id: 10.10.5.2
+                uptime: 169200
+            10.42.1.1:
+                address_family:
+                    ipv4:
+                        accepted_prefixes: 5
+                        received_prefixes: 5
+                        sent_prefixes: 1
+                description: ''
+                is_enabled: true
+                is_up: true
+                local_as: 65101
+                remote_as: 1
+                remote_id: 10.42.1.5
+                uptime: 1728000
+        router_id: 10.42.1.2
+napalm_facts:
+    fqdn: main-r1.test-corp.com
+    hostname: main-r1
+    interface_list:
+    - GigabitEthernet0/0
+    - GigabitEthernet0/1
+    - GigabitEthernet0/2
+    - GigabitEthernet0/3
+    model: IOSv
+    os_version: IOSv Software (VIOS-ADVENTERPRISEK9-M), Version 15.5(3)M, RELEASE
+        SOFTWARE (fc1)
+    serial_number: 9B6OH0WKJMOIJRDJMTNMV
+    uptime: 1797480
+    vendor: Cisco
+napalm_fqdn: main-r1.test-corp.com
+napalm_hostname: main-r1
+napalm_interface_list:
+- GigabitEthernet0/0
+- GigabitEthernet0/1
+- GigabitEthernet0/2
+- GigabitEthernet0/3
+napalm_interfaces:
+    GigabitEthernet0/0:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:96:2F:00
+        speed: 1000
+    GigabitEthernet0/1:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:96:2F:01
+        speed: 1000
+    GigabitEthernet0/2:
+        description: ''
+        is_enabled: false
+        is_up: false
+        last_flapped: -1.0
+        mac_address: 00:B8:46:96:2F:02
+        speed: 1000
+    GigabitEthernet0/3:
+        description: ''
+        is_enabled: false
+        is_up: false
+        last_flapped: -1.0
+        mac_address: 00:B8:46:96:2F:03
+        speed: 1000
+napalm_interfaces_counters:
+    GigabitEthernet0/0:
+        rx_broadcast_packets: 18
+        rx_discards: 0
+        rx_errors: 55951
+        rx_multicast_packets: 0
+        rx_octets: 40259701
+        rx_unicast_packets: 345720
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 48753808
+        tx_unicast_packets: 529993
+    GigabitEthernet0/1:
+        rx_broadcast_packets: 1
+        rx_discards: 0
+        rx_errors: 3262
+        rx_multicast_packets: 0
+        rx_octets: 26693894
+        rx_unicast_packets: 160371
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 19136918
+        tx_unicast_packets: 297428
+    GigabitEthernet0/2:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 0
+        tx_unicast_packets: 0
+    GigabitEthernet0/3:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 0
+        tx_unicast_packets: 0
+napalm_lldp_neighbors: {}
+napalm_mac_address_table: []
+napalm_model: IOSv
+napalm_os_version: IOSv Software (VIOS-ADVENTERPRISEK9-M), Version 15.5(3)M, RELEASE
+    SOFTWARE (fc1)
+napalm_serial_number: 9B6OH0WKJMOIJRDJMTNMV
+napalm_uptime: 1797480
+napalm_vendor: Cisco
+omit: __omit_place_holder__cddda67b7b9c402ea9373794d3cd78a8d3964a35
+output: napalm_all_report.log
+playbook_dir: /home/chris/network_automation/2.Easy_Wins/ansible
+report: all
+report_template_src_file: templates/all-text.j2
+src: napalm-facts
+
+ansible_check_mode: false
+ansible_playbook_python: /usr/bin/python3
+ansible_ssh_pass: automation
+ansible_user: network
+ansible_version:
+    full: 2.4.3.0
+    major: 2
+    minor: 4
+    revision: 3
+    string: 2.4.3.0
+fmt: text
+group_names:
+- ios
+- router
+groups:
+    all:
+    - main-r1
+    - main-r2
+    - main-cs1
+    - main-cs2
+    - remote-r1
+    - remote-cs1
+    - isp1
+    - isp2
+    ios:
+    - main-r1
+    - main-r2
+    - main-cs1
+    - main-cs2
+    - remote-r1
+    - remote-cs1
+    - isp1
+    - isp2
+    router:
+    - main-r1
+    - main-r2
+    - remote-r1
+    switch:
+    - main-cs1
+    - main-cs2
+    - remote-cs1
+    ungrouped: []
+inventory_dir: /home/chris/network_automation/2.Easy_Wins/ansible
+inventory_file: /home/chris/network_automation/2.Easy_Wins/ansible/hosts
+inventory_hostname: main-r2
+inventory_hostname_short: main-r2
+napalm_arp_table:
+-   age: 0.0
+    interface: GigabitEthernet0/0
+    ip: 10.10.0.5
+    mac: 00:B8:46:EA:DC:00
+-   age: 127.0
+    interface: GigabitEthernet0/0
+    ip: 10.10.0.6
+    mac: 00:B8:46:F8:BE:01
+-   age: 55.0
+    interface: GigabitEthernet0/1
+    ip: 10.42.2.1
+    mac: C2:02:07:64:00:00
+-   age: 0.0
+    interface: GigabitEthernet0/1
+    ip: 10.42.2.2
+    mac: 00:B8:46:EA:DC:01
+napalm_bgp_neighbors:
+    global:
+        peers:
+            10.10.0.6:
+                address_family:
+                    ipv4:
+                        accepted_prefixes: 2
+                        received_prefixes: 2
+                        sent_prefixes: 4
+                description: ''
+                is_enabled: true
+                is_up: true
+                local_as: 65101
+                remote_as: 65101
+                remote_id: 10.10.5.3
+                uptime: 169200
+            10.42.2.1:
+                address_family:
+                    ipv4:
+                        accepted_prefixes: 5
+                        received_prefixes: 5
+                        sent_prefixes: 1
+                description: ''
+                is_enabled: true
+                is_up: true
+                local_as: 65101
+                remote_as: 2
+                remote_id: 10.42.2.5
+                uptime: 1728000
+        router_id: 10.42.2.2
+napalm_facts:
+    fqdn: main-r2.test-corp.com
+    hostname: main-r2
+    interface_list:
+    - GigabitEthernet0/0
+    - GigabitEthernet0/1
+    - GigabitEthernet0/2
+    - GigabitEthernet0/3
+    model: IOSv
+    os_version: IOSv Software (VIOS-ADVENTERPRISEK9-M), Version 15.5(3)M, RELEASE
+        SOFTWARE (fc1)
+    serial_number: 98URKZRMPVGJ6ZNASPMIK
+    uptime: 1796880
+    vendor: Cisco
+napalm_fqdn: main-r2.test-corp.com
+napalm_hostname: main-r2
+napalm_interface_list:
+- GigabitEthernet0/0
+- GigabitEthernet0/1
+- GigabitEthernet0/2
+- GigabitEthernet0/3
+napalm_interfaces:
+    GigabitEthernet0/0:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:EA:DC:00
+        speed: 1000
+    GigabitEthernet0/1:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:EA:DC:01
+        speed: 1000
+    GigabitEthernet0/2:
+        description: ''
+        is_enabled: false
+        is_up: false
+        last_flapped: -1.0
+        mac_address: 00:B8:46:EA:DC:02
+        speed: 1000
+    GigabitEthernet0/3:
+        description: ''
+        is_enabled: false
+        is_up: false
+        last_flapped: -1.0
+        mac_address: 00:B8:46:EA:DC:03
+        speed: 1000
+napalm_interfaces_counters:
+    GigabitEthernet0/0:
+        rx_broadcast_packets: 7
+        rx_discards: 0
+        rx_errors: 25150
+        rx_multicast_packets: 0
+        rx_octets: 37196041
+        rx_unicast_packets: 307741
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 53051104
+        tx_unicast_packets: 516394
+    GigabitEthernet0/1:
+        rx_broadcast_packets: 2
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 18444645
+        rx_unicast_packets: 114222
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 28976562
+        tx_unicast_packets: 293820
+    GigabitEthernet0/2:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 0
+        tx_unicast_packets: 0
+    GigabitEthernet0/3:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 0
+        tx_unicast_packets: 0
+napalm_lldp_neighbors: {}
+napalm_mac_address_table: []
+napalm_model: IOSv
+napalm_os_version: IOSv Software (VIOS-ADVENTERPRISEK9-M), Version 15.5(3)M, RELEASE
+    SOFTWARE (fc1)
+napalm_serial_number: 98URKZRMPVGJ6ZNASPMIK
+napalm_uptime: 1796880
+napalm_vendor: Cisco
+omit: __omit_place_holder__cddda67b7b9c402ea9373794d3cd78a8d3964a35
+output: napalm_all_report.log
+playbook_dir: /home/chris/network_automation/2.Easy_Wins/ansible
+report: all
+report_template_src_file: templates/all-text.j2
+src: napalm-facts
+
+ansible_check_mode: false
+ansible_playbook_python: /usr/bin/python3
+ansible_ssh_pass: automation
+ansible_user: network
+ansible_version:
+    full: 2.4.3.0
+    major: 2
+    minor: 4
+    revision: 3
+    string: 2.4.3.0
+fmt: text
+group_names:
+- ios
+- switch
+groups:
+    all:
+    - main-r1
+    - main-r2
+    - main-cs1
+    - main-cs2
+    - remote-r1
+    - remote-cs1
+    - isp1
+    - isp2
+    ios:
+    - main-r1
+    - main-r2
+    - main-cs1
+    - main-cs2
+    - remote-r1
+    - remote-cs1
+    - isp1
+    - isp2
+    router:
+    - main-r1
+    - main-r2
+    - remote-r1
+    switch:
+    - main-cs1
+    - main-cs2
+    - remote-cs1
+    ungrouped: []
+inventory_dir: /home/chris/network_automation/2.Easy_Wins/ansible
+inventory_file: /home/chris/network_automation/2.Easy_Wins/ansible/hosts
+inventory_hostname: remote-cs1
+inventory_hostname_short: remote-cs1
+napalm_arp_table:
+-   age: 0.0
+    interface: GigabitEthernet0/0
+    ip: 10.10.16.1
+    mac: 00:B8:46:19:93:00
+-   age: 142.0
+    interface: GigabitEthernet0/0
+    ip: 10.10.16.2
+    mac: C2:03:07:73:00:10
+napalm_bgp_neighbors:
+    global:
+        peers:
+            10.10.16.2:
+                address_family:
+                    ipv4:
+                        accepted_prefixes: 6
+                        received_prefixes: 6
+                        sent_prefixes: 0
+                description: ''
+                is_enabled: true
+                is_up: true
+                local_as: 65102
+                remote_as: 65102
+                remote_id: 10.42.2.6
+                uptime: 165600
+        router_id: 10.10.16.1
+napalm_facts:
+    fqdn: remote-cs1.test-corp.com
+    hostname: remote-cs1
+    interface_list:
+    - GigabitEthernet0/1
+    - GigabitEthernet0/2
+    - GigabitEthernet0/3
+    - GigabitEthernet0/0
+    - GigabitEthernet1/0
+    - GigabitEthernet1/1
+    - GigabitEthernet1/2
+    - GigabitEthernet1/3
+    - GigabitEthernet2/0
+    - GigabitEthernet2/1
+    - GigabitEthernet2/2
+    - GigabitEthernet2/3
+    - GigabitEthernet3/0
+    - GigabitEthernet3/1
+    - GigabitEthernet3/2
+    - GigabitEthernet3/3
+    model: IOSv
+    os_version: vios_l2 Software (vios_l2-ADVENTERPRISEK9-M), Version 15.2(4.0.55)E,
+        TEST ENGINEERING ESTG_WEEKLY BUILD, synced to  END_OF_FLO_ISP
+    serial_number: 9J7DEZLBCT6
+    uptime: 165780
+    vendor: Cisco
+napalm_fqdn: remote-cs1.test-corp.com
+napalm_hostname: remote-cs1
+napalm_interface_list:
+- GigabitEthernet0/1
+- GigabitEthernet0/2
+- GigabitEthernet0/3
+- GigabitEthernet0/0
+- GigabitEthernet1/0
+- GigabitEthernet1/1
+- GigabitEthernet1/2
+- GigabitEthernet1/3
+- GigabitEthernet2/0
+- GigabitEthernet2/1
+- GigabitEthernet2/2
+- GigabitEthernet2/3
+- GigabitEthernet3/0
+- GigabitEthernet3/1
+- GigabitEthernet3/2
+- GigabitEthernet3/3
+napalm_interfaces:
+    GigabitEthernet0/0:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:19:93:00
+        speed: 1000
+    GigabitEthernet0/1:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:19:93:01
+        speed: 1000
+    GigabitEthernet0/2:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:19:93:02
+        speed: 1000
+    GigabitEthernet0/3:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:19:93:03
+        speed: 1000
+    GigabitEthernet1/0:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:19:93:04
+        speed: 1000
+    GigabitEthernet1/1:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:19:93:05
+        speed: 1000
+    GigabitEthernet1/2:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:19:93:06
+        speed: 1000
+    GigabitEthernet1/3:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:19:93:07
+        speed: 1000
+    GigabitEthernet2/0:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:19:93:08
+        speed: 1000
+    GigabitEthernet2/1:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:19:93:09
+        speed: 1000
+    GigabitEthernet2/2:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:19:93:0A
+        speed: 1000
+    GigabitEthernet2/3:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:19:93:0B
+        speed: 1000
+    GigabitEthernet3/0:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:19:93:0C
+        speed: 1000
+    GigabitEthernet3/1:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:19:93:0D
+        speed: 1000
+    GigabitEthernet3/2:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:19:93:0E
+        speed: 1000
+    GigabitEthernet3/3:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: 00:B8:46:19:93:0F
+        speed: 1000
+napalm_interfaces_counters:
+    GigabitEthernet0/0:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 13547
+        rx_multicast_packets: 0
+        rx_octets: 4617331
+        rx_unicast_packets: 44242
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 8335910
+        tx_unicast_packets: 63570
+    GigabitEthernet0/1:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 7095297
+        tx_unicast_packets: 95620
+    GigabitEthernet0/2:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 7091721
+        tx_unicast_packets: 95612
+    GigabitEthernet0/3:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 7094403
+        tx_unicast_packets: 95618
+    GigabitEthernet1/0:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 7090380
+        tx_unicast_packets: 95609
+    GigabitEthernet1/1:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 7096638
+        tx_unicast_packets: 95623
+    GigabitEthernet1/2:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 7093062
+        tx_unicast_packets: 95615
+    GigabitEthernet1/3:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 7092168
+        tx_unicast_packets: 95613
+    GigabitEthernet2/0:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 7092615
+        tx_unicast_packets: 95614
+    GigabitEthernet2/1:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 7093062
+        tx_unicast_packets: 95615
+    GigabitEthernet2/2:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 7093062
+        tx_unicast_packets: 95615
+    GigabitEthernet2/3:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 7095297
+        tx_unicast_packets: 95620
+    GigabitEthernet3/0:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 7095744
+        tx_unicast_packets: 95621
+    GigabitEthernet3/1:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 7091274
+        tx_unicast_packets: 95611
+    GigabitEthernet3/2:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 7095744
+        tx_unicast_packets: 95621
+    GigabitEthernet3/3:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: 0
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 7093062
+        tx_unicast_packets: 95615
+napalm_lldp_neighbors: {}
+napalm_mac_address_table: []
+napalm_model: IOSv
+napalm_os_version: vios_l2 Software (vios_l2-ADVENTERPRISEK9-M), Version 15.2(4.0.55)E,
+    TEST ENGINEERING ESTG_WEEKLY BUILD, synced to  END_OF_FLO_ISP
+napalm_serial_number: 9J7DEZLBCT6
+napalm_uptime: 165780
+napalm_vendor: Cisco
+omit: __omit_place_holder__cddda67b7b9c402ea9373794d3cd78a8d3964a35
+output: napalm_all_report.log
+playbook_dir: /home/chris/network_automation/2.Easy_Wins/ansible
+report: all
+report_template_src_file: templates/all-text.j2
+src: napalm-facts
+
+ansible_check_mode: false
+ansible_playbook_python: /usr/bin/python3
+ansible_ssh_pass: automation
+ansible_user: network
+ansible_version:
+    full: 2.4.3.0
+    major: 2
+    minor: 4
+    revision: 3
+    string: 2.4.3.0
+fmt: text
+group_names:
+- ios
+- router
+groups:
+    all:
+    - main-r1
+    - main-r2
+    - main-cs1
+    - main-cs2
+    - remote-r1
+    - remote-cs1
+    - isp1
+    - isp2
+    ios:
+    - main-r1
+    - main-r2
+    - main-cs1
+    - main-cs2
+    - remote-r1
+    - remote-cs1
+    - isp1
+    - isp2
+    router:
+    - main-r1
+    - main-r2
+    - remote-r1
+    switch:
+    - main-cs1
+    - main-cs2
+    - remote-cs1
+    ungrouped: []
+inventory_dir: /home/chris/network_automation/2.Easy_Wins/ansible
+inventory_file: /home/chris/network_automation/2.Easy_Wins/ansible/hosts
+inventory_hostname: remote-r1
+inventory_hostname_short: remote-r1
+napalm_arp_table:
+-   age: 150.0
+    interface: FastEthernet1/0
+    ip: 10.10.16.1
+    mac: 00:B8:46:19:93:00
+-   age: 0.0
+    interface: FastEthernet1/0
+    ip: 10.10.16.2
+    mac: C2:03:07:73:00:10
+-   age: 7.0
+    interface: FastEthernet0/0
+    ip: 10.42.1.5
+    mac: C2:01:07:28:00:01
+-   age: 0.0
+    interface: FastEthernet0/0
+    ip: 10.42.1.6
+    mac: C2:03:07:73:00:00
+-   age: 83.0
+    interface: FastEthernet0/1
+    ip: 10.42.2.5
+    mac: C2:02:07:64:00:01
+-   age: 0.0
+    interface: FastEthernet0/1
+    ip: 10.42.2.6
+    mac: C2:03:07:73:00:01
+napalm_bgp_neighbors:
+    global:
+        peers:
+            10.10.16.1:
+                address_family:
+                    ipv4:
+                        accepted_prefixes: 0
+                        received_prefixes: 0
+                        sent_prefixes: 6
+                description: ''
+                is_enabled: true
+                is_up: true
+                local_as: 65102
+                remote_as: 65102
+                remote_id: 10.10.16.1
+                uptime: 172800
+            10.42.1.5:
+                address_family:
+                    ipv4:
+                        accepted_prefixes: 3
+                        received_prefixes: 3
+                        sent_prefixes: 6
+                description: ''
+                is_enabled: true
+                is_up: true
+                local_as: 65102
+                remote_as: 1
+                remote_id: 10.42.1.5
+                uptime: 1728000
+            10.42.2.5:
+                address_family:
+                    ipv4:
+                        accepted_prefixes: 3
+                        received_prefixes: 3
+                        sent_prefixes: 6
+                description: ''
+                is_enabled: true
+                is_up: true
+                local_as: 65102
+                remote_as: 2
+                remote_id: 10.42.2.5
+                uptime: 1728000
+        router_id: 10.42.2.6
+napalm_facts:
+    fqdn: remote-r1.test-corp.com
+    hostname: remote-r1
+    interface_list:
+    - FastEthernet0/0
+    - FastEthernet0/1
+    - FastEthernet1/0
+    - Serial2/0
+    - Serial2/1
+    - Serial2/2
+    - Serial2/3
+    model: '3725'
+    os_version: 3700 Software (C3725-ADVENTERPRISEK9-M), Version 12.4(15)T14, RELEASE
+        SOFTWARE (fc2)
+    serial_number: FTX0945W0MY
+    uptime: 1808880
+    vendor: Cisco
+napalm_fqdn: remote-r1.test-corp.com
+napalm_hostname: remote-r1
+napalm_interface_list:
+- FastEthernet0/0
+- FastEthernet0/1
+- FastEthernet1/0
+- Serial2/0
+- Serial2/1
+- Serial2/2
+- Serial2/3
+napalm_interfaces:
+    FastEthernet0/0:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: C2:03:07:73:00:00
+        speed: 10
+    FastEthernet0/1:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: C2:03:07:73:00:01
+        speed: 10
+    FastEthernet1/0:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: C2:03:07:73:00:10
+        speed: 100
+    Serial2/0:
+        description: ''
+        is_enabled: false
+        is_up: false
+        last_flapped: -1.0
+        mac_address: ''
+        speed: 2
+    Serial2/1:
+        description: ''
+        is_enabled: false
+        is_up: false
+        last_flapped: -1.0
+        mac_address: ''
+        speed: 2
+    Serial2/2:
+        description: ''
+        is_enabled: false
+        is_up: false
+        last_flapped: -1.0
+        mac_address: ''
+        speed: 2
+    Serial2/3:
+        description: ''
+        is_enabled: false
+        is_up: false
+        last_flapped: -1.0
+        mac_address: ''
+        speed: 2
+napalm_interfaces_counters:
+    FastEthernet0/0:
+        rx_broadcast_packets: 30149
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: -1
+        rx_octets: 16245492
+        rx_unicast_packets: 102496
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 34429881
+        tx_unicast_packets: 318408
+    FastEthernet0/1:
+        rx_broadcast_packets: 30149
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: -1
+        rx_octets: 14609869
+        rx_unicast_packets: 84728
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 25593904
+        tx_unicast_packets: 261919
+    FastEthernet1/0:
+        rx_broadcast_packets: 190478
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: -1
+        rx_octets: 35626569
+        rx_unicast_packets: 268926
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 46217972
+        tx_unicast_packets: 492802
+    Serial2/0:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: -1
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 24
+        tx_unicast_packets: 1
+    Serial2/1:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: -1
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 24
+        tx_unicast_packets: 1
+    Serial2/2:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: -1
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 24
+        tx_unicast_packets: 1
+    Serial2/3:
+        rx_broadcast_packets: 0
+        rx_discards: 0
+        rx_errors: 0
+        rx_multicast_packets: -1
+        rx_octets: 0
+        rx_unicast_packets: 0
+        tx_broadcast_packets: -1
+        tx_discards: 0
+        tx_errors: 0
+        tx_multicast_packets: -1
+        tx_octets: 24
+        tx_unicast_packets: 1
+napalm_lldp_neighbors: {}
+napalm_mac_address_table: []
+napalm_model: '3725'
+napalm_os_version: 3700 Software (C3725-ADVENTERPRISEK9-M), Version 12.4(15)T14, RELEASE
+    SOFTWARE (fc2)
+napalm_serial_number: FTX0945W0MY
+napalm_uptime: 1808880
+napalm_vendor: Cisco
+omit: __omit_place_holder__cddda67b7b9c402ea9373794d3cd78a8d3964a35
+output: napalm_all_report.log
+playbook_dir: /home/chris/network_automation/2.Easy_Wins/ansible
+report: all
+report_template_src_file: templates/all-text.j2
+src: napalm-facts
+

@@ -1,0 +1,314 @@
+
+HOSTNAME        VERSION              MODEL                  SERIAL                    UPTIME  
+isp1            12.4(15)T14          3725 (R7000) processor FTX0945W0MY               181367684
+isp2            12.4(15)T14          3725 (R7000) processor FTX0945W0MY               181367671
+main-cs1        15.2(4.0.55)E        IOSv () processor      9ANFJ03WQDM               16464920
+main-cs2        15.2(4.0.55)E        IOSv () processor      9M2QNSG7IQ2               16431399
+main-r1         15.5(3)M             IOSv                   9B6OH0WKJMOIJRDJMTNMV     180218656
+main-r2         15.5(3)M             IOSv                   98URKZRMPVGJ6ZNASPMIK     180159473
+remote-cs1      15.2(4.0.55)E        IOSv () processor      9J7DEZLBCT6               17025577
+remote-r1       12.4(15)T14          3725 (R7000) processor FTX0945W0MY               181367415
+
+
+isp1
+FastEthernet0/0
+  description None
+    ip address 10.42.1.1/30
+  Status up/up 
+  
+FastEthernet0/1
+  description None
+    ip address 10.42.1.5/30
+  Status up/up 
+  
+FastEthernet1/0
+  description None
+  
+Serial2/0
+  description None
+  
+Serial2/1
+  description None
+  
+Serial2/2
+  description None
+  
+Serial2/3
+  description None
+  
+
+
+isp2
+FastEthernet0/0
+  description None
+    ip address 10.42.2.1/30
+  Status up/up 
+  
+FastEthernet0/1
+  description None
+    ip address 10.42.2.5/30
+  Status up/up 
+  
+FastEthernet1/0
+  description None
+  
+Serial2/0
+  description None
+  
+Serial2/1
+  description None
+  
+Serial2/2
+  description None
+  
+Serial2/3
+  description None
+  
+
+
+main-cs1
+GigabitEthernet0/0
+  description MANAGEMENT
+  
+GigabitEthernet0/1
+  description None
+    ip address 10.10.0.2/30
+  Status up/up (connected) 
+  
+GigabitEthernet0/2
+  description None
+  
+GigabitEthernet0/3
+  description None
+  
+GigabitEthernet1/0
+  description None
+  
+GigabitEthernet1/1
+  description None
+  
+GigabitEthernet1/2
+  description None
+  
+GigabitEthernet1/3
+  description None
+  
+GigabitEthernet2/0
+  description None
+  
+GigabitEthernet2/1
+  description None
+  
+GigabitEthernet2/2
+  description None
+  
+GigabitEthernet2/3
+  description None
+  
+GigabitEthernet3/0
+  description None
+  
+GigabitEthernet3/1
+  description None
+  
+GigabitEthernet3/2
+  description None
+  
+GigabitEthernet3/3
+  description None
+  
+Vlan100
+  description None
+    ip address 10.10.0.9/30
+  Status up/up 
+  
+Vlan5
+  description None
+    ip address 10.10.5.2/24
+  Status up/up 
+  
+
+
+main-cs2
+GigabitEthernet0/0
+  description MANAGEMENT
+  
+GigabitEthernet0/1
+  description None
+    ip address 10.10.0.6/30
+  Status up/up (connected) 
+  
+GigabitEthernet0/2
+  description None
+  
+GigabitEthernet0/3
+  description None
+  
+GigabitEthernet1/0
+  description None
+  
+GigabitEthernet1/1
+  description None
+  
+GigabitEthernet1/2
+  description None
+  
+GigabitEthernet1/3
+  description None
+  
+GigabitEthernet2/0
+  description None
+  
+GigabitEthernet2/1
+  description None
+  
+GigabitEthernet2/2
+  description None
+  
+GigabitEthernet2/3
+  description None
+  
+GigabitEthernet3/0
+  description None
+  
+GigabitEthernet3/1
+  description None
+  
+GigabitEthernet3/2
+  description None
+  
+GigabitEthernet3/3
+  description None
+  
+Vlan100
+  description None
+    ip address 10.10.0.10/30
+  Status up/up 
+  
+Vlan5
+  description None
+    ip address 10.10.5.3/24
+  Status up/up 
+  
+
+
+main-r1
+GigabitEthernet0/0
+  description None
+    ip address 10.10.0.1/30
+  Status up/up 
+  
+GigabitEthernet0/1
+  description None
+    ip address 10.42.1.2/30
+  Status up/up 
+  
+GigabitEthernet0/2
+  description None
+  
+GigabitEthernet0/3
+  description None
+  
+
+
+main-r2
+GigabitEthernet0/0
+  description None
+    ip address 10.10.0.5/30
+  Status up/up 
+  
+GigabitEthernet0/1
+  description None
+    ip address 10.42.2.2/30
+  Status up/up 
+  
+GigabitEthernet0/2
+  description None
+  
+GigabitEthernet0/3
+  description None
+  
+
+
+remote-cs1
+GigabitEthernet0/0
+  description None
+    ip address 10.10.16.1/30
+  Status up/up (connected) 
+  
+GigabitEthernet0/1
+  description None
+  
+GigabitEthernet0/2
+  description None
+  
+GigabitEthernet0/3
+  description None
+  
+GigabitEthernet1/0
+  description None
+  
+GigabitEthernet1/1
+  description None
+  
+GigabitEthernet1/2
+  description None
+  
+GigabitEthernet1/3
+  description None
+  
+GigabitEthernet2/0
+  description None
+  
+GigabitEthernet2/1
+  description None
+  
+GigabitEthernet2/2
+  description None
+  
+GigabitEthernet2/3
+  description None
+  
+GigabitEthernet3/0
+  description None
+  
+GigabitEthernet3/1
+  description None
+  
+GigabitEthernet3/2
+  description None
+  
+GigabitEthernet3/3
+  description None
+  
+
+
+remote-r1
+FastEthernet0/0
+  description None
+    ip address 10.42.1.6/30
+  Status up/up 
+  
+FastEthernet0/1
+  description None
+    ip address 10.42.2.6/30
+  Status up/up 
+  
+FastEthernet1/0
+  description None
+    ip address 10.10.16.2/30
+  Status up/up 
+  
+Serial2/0
+  description None
+  
+Serial2/1
+  description None
+  
+Serial2/2
+  description None
+  
+Serial2/3
+  description None
+  
+

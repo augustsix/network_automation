@@ -1,0 +1,2465 @@
+ansible_all_ipv4_addresses:
+- 10.42.1.1
+- 10.42.1.5
+ansible_check_mode: false
+ansible_interfaces:
+    '1':
+        adminstatus: down
+        description: ''
+        ifindex: '1'
+        mac: c20107280010
+        mtu: '1500'
+        name: FastEthernet1/0
+        operstatus: down
+        speed: '1500'
+    '2':
+        adminstatus: up
+        description: ''
+        ifindex: '2'
+        ipv4:
+        -   address: 10.42.1.1
+            netmask: 255.255.255.252
+        mac: c20107280000
+        mtu: '1500'
+        name: FastEthernet0/0
+        operstatus: up
+        speed: '1500'
+    '3':
+        adminstatus: up
+        description: ''
+        ifindex: '3'
+        ipv4:
+        -   address: 10.42.1.5
+            netmask: 255.255.255.252
+        mac: c20107280001
+        mtu: '1500'
+        name: FastEthernet0/1
+        operstatus: up
+        speed: '1500'
+    '4':
+        adminstatus: down
+        description: ''
+        ifindex: '4'
+        mac: ''
+        mtu: '1500'
+        name: Serial2/0
+        operstatus: down
+        speed: '1500'
+    '5':
+        adminstatus: down
+        description: ''
+        ifindex: '5'
+        mac: ''
+        mtu: '1500'
+        name: Serial2/1
+        operstatus: down
+        speed: '1500'
+    '6':
+        adminstatus: down
+        description: ''
+        ifindex: '6'
+        mac: ''
+        mtu: '1500'
+        name: Serial2/2
+        operstatus: down
+        speed: '1500'
+    '7':
+        adminstatus: down
+        description: ''
+        ifindex: '7'
+        mac: ''
+        mtu: '1500'
+        name: Serial2/3
+        operstatus: down
+        speed: '1500'
+    '9':
+        adminstatus: up
+        description: ''
+        ifindex: '9'
+        mac: ''
+        mtu: '1500'
+        name: Null0
+        operstatus: up
+        speed: '1500'
+ansible_net_all_ipv4_addresses:
+- 10.42.1.5
+- 10.42.1.1
+ansible_net_all_ipv6_addresses: []
+ansible_net_gather_subset:
+- default
+- interfaces
+- hardware
+ansible_net_hostname: isp1
+ansible_net_image: tftp://255.255.255.255/unknown
+ansible_net_interfaces:
+    FastEthernet0/0:
+        bandwidth: 10000
+        description: null
+        duplex: null
+        ipv4:
+        -   address: 10.42.1.1
+            subnet: '30'
+        lineprotocol: 'up '
+        macaddress: c201.0728.0000
+        mediatype: null
+        mtu: 1500
+        operstatus: up
+        type: Gt96k FE
+    FastEthernet0/1:
+        bandwidth: 10000
+        description: null
+        duplex: null
+        ipv4:
+        -   address: 10.42.1.5
+            subnet: '30'
+        lineprotocol: 'up '
+        macaddress: c201.0728.0001
+        mediatype: null
+        mtu: 1500
+        operstatus: up
+        type: Gt96k FE
+    FastEthernet1/0:
+        bandwidth: 100000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'down '
+        macaddress: c201.0728.0010
+        mediatype: null
+        mtu: 1500
+        operstatus: administratively down
+        type: AmdFE
+    Serial2/0:
+        bandwidth: 1544
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'down '
+        macaddress: null
+        mediatype: null
+        mtu: 1500
+        operstatus: administratively down
+        type: null
+    Serial2/1:
+        bandwidth: 1544
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'down '
+        macaddress: null
+        mediatype: null
+        mtu: 1500
+        operstatus: administratively down
+        type: null
+    Serial2/2:
+        bandwidth: 1544
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'down '
+        macaddress: null
+        mediatype: null
+        mtu: 1500
+        operstatus: administratively down
+        type: null
+    Serial2/3:
+        bandwidth: 1544
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'down '
+        macaddress: null
+        mediatype: null
+        mtu: 1500
+        operstatus: administratively down
+        type: null
+ansible_net_memfree_mb: 129224.86328125
+ansible_net_memtotal_mb: 152412.15625
+ansible_net_model: 3725 (R7000) processor
+ansible_net_serialnum: FTX0945W0MY
+ansible_net_version: 12.4(15)T14
+ansible_playbook_python: /usr/bin/python3
+ansible_ssh_pass: automation
+ansible_syscontact: admin@lab.local
+ansible_sysdescr: "Cisco IOS Software, 3700 Software (C3725-ADVENTERPRISEK9-M), Version\
+    \ 12.4(15)T14, RELEASE SOFTWARE (fc2)\r\nTechnical Support: http://www.cisco.com/techsupport\r\
+    \nCopyright (c) 1986-2010 by Cisco Systems, Inc.\r\nCompiled Tue 17-Aug-10 12:08\
+    \ by prod_rel_team"
+ansible_syslocation: ''
+ansible_sysname: isp1.isp1.net
+ansible_sysobjectid: 1.3.6.1.4.1.9.1.122
+ansible_sysuptime: '174095914'
+ansible_user: network
+ansible_version:
+    full: 2.4.3.0
+    major: 2
+    minor: 4
+    revision: 3
+    string: 2.4.3.0
+fmt: text
+group_names:
+- ios
+groups:
+    all:
+    - main-cs1
+    - main-cs2
+    - remote-cs1
+    - main-r1
+    - main-r2
+    - remote-r1
+    - isp1
+    - isp2
+    ios:
+    - main-r1
+    - main-r2
+    - main-cs1
+    - main-cs2
+    - remote-r1
+    - remote-cs1
+    - isp1
+    - isp2
+    router:
+    - main-r1
+    - main-r2
+    - remote-r1
+    switch:
+    - main-cs1
+    - main-cs2
+    - remote-cs1
+    ungrouped: []
+inventory_dir: /home/chris/network_automation/2.Easy_Wins/ansible
+inventory_file: /home/chris/network_automation/2.Easy_Wins/ansible/hosts
+inventory_hostname: isp1
+inventory_hostname_short: isp1
+omit: __omit_place_holder__00a611387d619e0fc647d13fa0441957ffbeadf4
+output: all.log
+playbook_dir: /home/chris/network_automation/2.Easy_Wins/ansible
+report: all
+report_template_src_file: templates/all-text.j2
+
+ansible_all_ipv4_addresses:
+- 10.42.2.1
+- 10.42.2.5
+ansible_check_mode: false
+ansible_interfaces:
+    '1':
+        adminstatus: down
+        description: ''
+        ifindex: '1'
+        mac: c20207640010
+        mtu: '1500'
+        name: FastEthernet1/0
+        operstatus: down
+        speed: '1500'
+    '2':
+        adminstatus: up
+        description: ''
+        ifindex: '2'
+        ipv4:
+        -   address: 10.42.2.1
+            netmask: 255.255.255.252
+        mac: c20207640000
+        mtu: '1500'
+        name: FastEthernet0/0
+        operstatus: up
+        speed: '1500'
+    '3':
+        adminstatus: up
+        description: ''
+        ifindex: '3'
+        ipv4:
+        -   address: 10.42.2.5
+            netmask: 255.255.255.252
+        mac: c20207640001
+        mtu: '1500'
+        name: FastEthernet0/1
+        operstatus: up
+        speed: '1500'
+    '4':
+        adminstatus: down
+        description: ''
+        ifindex: '4'
+        mac: ''
+        mtu: '1500'
+        name: Serial2/0
+        operstatus: down
+        speed: '1500'
+    '5':
+        adminstatus: down
+        description: ''
+        ifindex: '5'
+        mac: ''
+        mtu: '1500'
+        name: Serial2/1
+        operstatus: down
+        speed: '1500'
+    '6':
+        adminstatus: down
+        description: ''
+        ifindex: '6'
+        mac: ''
+        mtu: '1500'
+        name: Serial2/2
+        operstatus: down
+        speed: '1500'
+    '7':
+        adminstatus: down
+        description: ''
+        ifindex: '7'
+        mac: ''
+        mtu: '1500'
+        name: Serial2/3
+        operstatus: down
+        speed: '1500'
+    '9':
+        adminstatus: up
+        description: ''
+        ifindex: '9'
+        mac: ''
+        mtu: '1500'
+        name: Null0
+        operstatus: up
+        speed: '1500'
+ansible_net_all_ipv4_addresses:
+- 10.42.2.1
+- 10.42.2.5
+ansible_net_all_ipv6_addresses: []
+ansible_net_gather_subset:
+- default
+- hardware
+- interfaces
+ansible_net_hostname: isp2
+ansible_net_image: tftp://255.255.255.255/unknown
+ansible_net_interfaces:
+    FastEthernet0/0:
+        bandwidth: 10000
+        description: null
+        duplex: null
+        ipv4:
+        -   address: 10.42.2.1
+            subnet: '30'
+        lineprotocol: 'up '
+        macaddress: c202.0764.0000
+        mediatype: null
+        mtu: 1500
+        operstatus: up
+        type: Gt96k FE
+    FastEthernet0/1:
+        bandwidth: 10000
+        description: null
+        duplex: null
+        ipv4:
+        -   address: 10.42.2.5
+            subnet: '30'
+        lineprotocol: 'up '
+        macaddress: c202.0764.0001
+        mediatype: null
+        mtu: 1500
+        operstatus: up
+        type: Gt96k FE
+    FastEthernet1/0:
+        bandwidth: 100000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'down '
+        macaddress: c202.0764.0010
+        mediatype: null
+        mtu: 1500
+        operstatus: administratively down
+        type: AmdFE
+    Serial2/0:
+        bandwidth: 1544
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'down '
+        macaddress: null
+        mediatype: null
+        mtu: 1500
+        operstatus: administratively down
+        type: null
+    Serial2/1:
+        bandwidth: 1544
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'down '
+        macaddress: null
+        mediatype: null
+        mtu: 1500
+        operstatus: administratively down
+        type: null
+    Serial2/2:
+        bandwidth: 1544
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'down '
+        macaddress: null
+        mediatype: null
+        mtu: 1500
+        operstatus: administratively down
+        type: null
+    Serial2/3:
+        bandwidth: 1544
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'down '
+        macaddress: null
+        mediatype: null
+        mtu: 1500
+        operstatus: administratively down
+        type: null
+ansible_net_memfree_mb: 129235.53125
+ansible_net_memtotal_mb: 152412.15625
+ansible_net_model: 3725 (R7000) processor
+ansible_net_serialnum: FTX0945W0MY
+ansible_net_version: 12.4(15)T14
+ansible_playbook_python: /usr/bin/python3
+ansible_ssh_pass: automation
+ansible_syscontact: admin@lab.local
+ansible_sysdescr: "Cisco IOS Software, 3700 Software (C3725-ADVENTERPRISEK9-M), Version\
+    \ 12.4(15)T14, RELEASE SOFTWARE (fc2)\r\nTechnical Support: http://www.cisco.com/techsupport\r\
+    \nCopyright (c) 1986-2010 by Cisco Systems, Inc.\r\nCompiled Tue 17-Aug-10 12:08\
+    \ by prod_rel_team"
+ansible_syslocation: ''
+ansible_sysname: isp2.isp2.net
+ansible_sysobjectid: 1.3.6.1.4.1.9.1.122
+ansible_sysuptime: '174095964'
+ansible_user: network
+ansible_version:
+    full: 2.4.3.0
+    major: 2
+    minor: 4
+    revision: 3
+    string: 2.4.3.0
+fmt: text
+group_names:
+- ios
+groups:
+    all:
+    - main-cs1
+    - main-cs2
+    - remote-cs1
+    - main-r1
+    - main-r2
+    - remote-r1
+    - isp1
+    - isp2
+    ios:
+    - main-r1
+    - main-r2
+    - main-cs1
+    - main-cs2
+    - remote-r1
+    - remote-cs1
+    - isp1
+    - isp2
+    router:
+    - main-r1
+    - main-r2
+    - remote-r1
+    switch:
+    - main-cs1
+    - main-cs2
+    - remote-cs1
+    ungrouped: []
+inventory_dir: /home/chris/network_automation/2.Easy_Wins/ansible
+inventory_file: /home/chris/network_automation/2.Easy_Wins/ansible/hosts
+inventory_hostname: isp2
+inventory_hostname_short: isp2
+omit: __omit_place_holder__00a611387d619e0fc647d13fa0441957ffbeadf4
+output: all.log
+playbook_dir: /home/chris/network_automation/2.Easy_Wins/ansible
+report: all
+report_template_src_file: templates/all-text.j2
+
+ansible_all_ipv4_addresses:
+- 10.10.0.2
+- 10.10.0.9
+- 10.10.5.1
+- 10.10.5.2
+ansible_check_mode: false
+ansible_interfaces:
+    '1':
+        adminstatus: up
+        description: MANAGEMENT
+        ifindex: '1'
+        mac: 00b8467e0300
+        mtu: '1500'
+        name: GigabitEthernet0/0
+        operstatus: up
+        speed: '1500'
+    '10':
+        adminstatus: up
+        description: ''
+        ifindex: '10'
+        mac: 00b8467e0309
+        mtu: '1500'
+        name: GigabitEthernet2/1
+        operstatus: up
+        speed: '1500'
+    '11':
+        adminstatus: up
+        description: ''
+        ifindex: '11'
+        mac: 00b8467e030a
+        mtu: '1500'
+        name: GigabitEthernet2/2
+        operstatus: up
+        speed: '1500'
+    '12':
+        adminstatus: up
+        description: ''
+        ifindex: '12'
+        mac: 00b8467e030b
+        mtu: '1500'
+        name: GigabitEthernet2/3
+        operstatus: up
+        speed: '1500'
+    '13':
+        adminstatus: up
+        description: ''
+        ifindex: '13'
+        mac: 00b8467e030c
+        mtu: '1500'
+        name: GigabitEthernet3/0
+        operstatus: up
+        speed: '1500'
+    '14':
+        adminstatus: up
+        description: ''
+        ifindex: '14'
+        mac: 00b8467e030d
+        mtu: '1500'
+        name: GigabitEthernet3/1
+        operstatus: up
+        speed: '1500'
+    '15':
+        adminstatus: up
+        description: ''
+        ifindex: '15'
+        mac: 00b8467e030e
+        mtu: '1500'
+        name: GigabitEthernet3/2
+        operstatus: up
+        speed: '1500'
+    '16':
+        adminstatus: up
+        description: ''
+        ifindex: '16'
+        mac: 00b8467e030f
+        mtu: '1500'
+        name: GigabitEthernet3/3
+        operstatus: up
+        speed: '1500'
+    '17':
+        adminstatus: up
+        description: ''
+        ifindex: '17'
+        mac: ''
+        mtu: '1500'
+        name: Null0
+        operstatus: up
+        speed: '1500'
+    '18':
+        adminstatus: up
+        description: ''
+        ifindex: '18'
+        ipv4:
+        -   address: 10.10.5.2
+            netmask: 255.255.255.0
+        -   address: 10.10.5.1
+            netmask: 255.255.255.0
+        mac: 00b8467e8005
+        mtu: '1500'
+        name: Vlan5
+        operstatus: up
+        speed: '1500'
+    '19':
+        adminstatus: up
+        description: ''
+        ifindex: '19'
+        ipv4:
+        -   address: 10.10.0.9
+            netmask: 255.255.255.252
+        mac: 00b8467e8064
+        mtu: '1500'
+        name: Vlan100
+        operstatus: up
+        speed: '1500'
+    '2':
+        adminstatus: up
+        description: ''
+        ifindex: '2'
+        ipv4:
+        -   address: 10.10.0.2
+            netmask: 255.255.255.252
+        mac: 00b8467e0301
+        mtu: '1500'
+        name: GigabitEthernet0/1
+        operstatus: up
+        speed: '1500'
+    '3':
+        adminstatus: up
+        description: ''
+        ifindex: '3'
+        mac: 00b8467e0302
+        mtu: '1500'
+        name: GigabitEthernet0/2
+        operstatus: up
+        speed: '1500'
+    '4':
+        adminstatus: up
+        description: ''
+        ifindex: '4'
+        mac: 00b8467e0303
+        mtu: '1500'
+        name: GigabitEthernet0/3
+        operstatus: up
+        speed: '1500'
+    '5':
+        adminstatus: up
+        description: ''
+        ifindex: '5'
+        mac: 00b8467e0304
+        mtu: '1500'
+        name: GigabitEthernet1/0
+        operstatus: up
+        speed: '1500'
+    '6':
+        adminstatus: up
+        description: ''
+        ifindex: '6'
+        mac: 00b8467e0305
+        mtu: '1500'
+        name: GigabitEthernet1/1
+        operstatus: up
+        speed: '1500'
+    '7':
+        adminstatus: up
+        description: ''
+        ifindex: '7'
+        mac: 00b8467e0306
+        mtu: '1500'
+        name: GigabitEthernet1/2
+        operstatus: up
+        speed: '1500'
+    '8':
+        adminstatus: up
+        description: ''
+        ifindex: '8'
+        mac: 00b8467e0307
+        mtu: '1500'
+        name: GigabitEthernet1/3
+        operstatus: up
+        speed: '1500'
+    '9':
+        adminstatus: up
+        description: ''
+        ifindex: '9'
+        mac: 00b8467e0308
+        mtu: '1500'
+        name: GigabitEthernet2/0
+        operstatus: up
+        speed: '1500'
+ansible_net_all_ipv4_addresses:
+- 10.10.0.2
+- 10.10.0.9
+- 10.10.5.2
+ansible_net_all_ipv6_addresses: []
+ansible_net_filesystems:
+- 'flash0:'
+ansible_net_gather_subset:
+- hardware
+- default
+- interfaces
+ansible_net_hostname: main-cs1
+ansible_net_image: flash0:/vios_l2-adventerprisek9-m
+ansible_net_interfaces:
+    GigabitEthernet0/0:
+        bandwidth: 1000000
+        description: MANAGEMENT
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.467e.0300
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet0/1:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4:
+        -   address: 10.10.0.2
+            subnet: '30'
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.467e.0301
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: GigabitEthernet
+    GigabitEthernet0/2:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.467e.0302
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet0/3:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.467e.0303
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet1/0:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.467e.0304
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet1/1:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.467e.0305
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet1/2:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.467e.0306
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet1/3:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.467e.0307
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet2/0:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.467e.0308
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet2/1:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.467e.0309
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet2/2:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.467e.030a
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet2/3:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.467e.030b
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet3/0:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.467e.030c
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet3/1:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.467e.030d
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet3/2:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.467e.030e
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet3/3:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.467e.030f
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    Vlan100:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4:
+        -   address: 10.10.0.9
+            subnet: '30'
+        lineprotocol: 'up '
+        macaddress: 00b8.467e.8064
+        mediatype: null
+        mtu: 1500
+        operstatus: up
+        type: Ethernet SVI
+    Vlan5:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4:
+        -   address: 10.10.5.2
+            subnet: '24'
+        lineprotocol: 'up '
+        macaddress: 00b8.467e.8005
+        mediatype: null
+        mtu: 1500
+        operstatus: up
+        type: Ethernet SVI
+ansible_net_memfree_mb: 362774.36328125
+ansible_net_memtotal_mb: 463428.375
+ansible_net_model: IOSv () processor
+ansible_net_neighbors:
+    'null':
+    -   host: null
+        port: null
+ansible_net_serialnum: 9ANFJ03WQDM
+ansible_net_version: 15.2(4.0.55)E
+ansible_playbook_python: /usr/bin/python3
+ansible_ssh_pass: automation
+ansible_syscontact: ''
+ansible_sysdescr: "Cisco IOS Software, vios_l2 Software (vios_l2-ADVENTERPRISEK9-M),\
+    \ Version 15.2(4.0.55)E, TEST ENGINEERING ESTG_WEEKLY BUILD, synced to  END_OF_FLO_ISP\r\
+    \nTechnical Support: http://www.cisco.com/techsupport\r\nCopyright (c) 1986-2015\
+    \ by Cisco Systems, Inc.\r\nCo"
+ansible_syslocation: ''
+ansible_sysname: main-cs1.test-corp.com
+ansible_sysobjectid: 1.3.6.1.4.1.9.1
+ansible_sysuptime: '9747122'
+ansible_user: network
+ansible_version:
+    full: 2.4.3.0
+    major: 2
+    minor: 4
+    revision: 3
+    string: 2.4.3.0
+fmt: text
+group_names:
+- ios
+- switch
+groups:
+    all:
+    - main-cs1
+    - main-cs2
+    - remote-cs1
+    - main-r1
+    - main-r2
+    - remote-r1
+    - isp1
+    - isp2
+    ios:
+    - main-r1
+    - main-r2
+    - main-cs1
+    - main-cs2
+    - remote-r1
+    - remote-cs1
+    - isp1
+    - isp2
+    router:
+    - main-r1
+    - main-r2
+    - remote-r1
+    switch:
+    - main-cs1
+    - main-cs2
+    - remote-cs1
+    ungrouped: []
+inventory_dir: /home/chris/network_automation/2.Easy_Wins/ansible
+inventory_file: /home/chris/network_automation/2.Easy_Wins/ansible/hosts
+inventory_hostname: main-cs1
+inventory_hostname_short: main-cs1
+omit: __omit_place_holder__00a611387d619e0fc647d13fa0441957ffbeadf4
+output: all.log
+playbook_dir: /home/chris/network_automation/2.Easy_Wins/ansible
+report: all
+report_template_src_file: templates/all-text.j2
+
+ansible_all_ipv4_addresses:
+- 10.10.0.6
+- 10.10.0.10
+- 10.10.5.3
+ansible_check_mode: false
+ansible_interfaces:
+    '1':
+        adminstatus: up
+        description: MANAGEMENT
+        ifindex: '1'
+        mac: 00b846f8be00
+        mtu: '1500'
+        name: GigabitEthernet0/0
+        operstatus: up
+        speed: '1500'
+    '10':
+        adminstatus: up
+        description: ''
+        ifindex: '10'
+        mac: 00b846f8be09
+        mtu: '1500'
+        name: GigabitEthernet2/1
+        operstatus: up
+        speed: '1500'
+    '11':
+        adminstatus: up
+        description: ''
+        ifindex: '11'
+        mac: 00b846f8be0a
+        mtu: '1500'
+        name: GigabitEthernet2/2
+        operstatus: up
+        speed: '1500'
+    '12':
+        adminstatus: up
+        description: ''
+        ifindex: '12'
+        mac: 00b846f8be0b
+        mtu: '1500'
+        name: GigabitEthernet2/3
+        operstatus: up
+        speed: '1500'
+    '13':
+        adminstatus: up
+        description: ''
+        ifindex: '13'
+        mac: 00b846f8be0c
+        mtu: '1500'
+        name: GigabitEthernet3/0
+        operstatus: up
+        speed: '1500'
+    '14':
+        adminstatus: up
+        description: ''
+        ifindex: '14'
+        mac: 00b846f8be0d
+        mtu: '1500'
+        name: GigabitEthernet3/1
+        operstatus: up
+        speed: '1500'
+    '15':
+        adminstatus: up
+        description: ''
+        ifindex: '15'
+        mac: 00b846f8be0e
+        mtu: '1500'
+        name: GigabitEthernet3/2
+        operstatus: up
+        speed: '1500'
+    '16':
+        adminstatus: up
+        description: ''
+        ifindex: '16'
+        mac: 00b846f8be0f
+        mtu: '1500'
+        name: GigabitEthernet3/3
+        operstatus: up
+        speed: '1500'
+    '17':
+        adminstatus: up
+        description: ''
+        ifindex: '17'
+        mac: ''
+        mtu: '1500'
+        name: Null0
+        operstatus: up
+        speed: '1500'
+    '18':
+        adminstatus: up
+        description: ''
+        ifindex: '18'
+        ipv4:
+        -   address: 10.10.5.3
+            netmask: 255.255.255.0
+        mac: 00b846f88005
+        mtu: '1500'
+        name: Vlan5
+        operstatus: up
+        speed: '1500'
+    '19':
+        adminstatus: up
+        description: ''
+        ifindex: '19'
+        ipv4:
+        -   address: 10.10.0.10
+            netmask: 255.255.255.252
+        mac: 00b846f88064
+        mtu: '1500'
+        name: Vlan100
+        operstatus: up
+        speed: '1500'
+    '2':
+        adminstatus: up
+        description: ''
+        ifindex: '2'
+        ipv4:
+        -   address: 10.10.0.6
+            netmask: 255.255.255.252
+        mac: 00b846f8be01
+        mtu: '1500'
+        name: GigabitEthernet0/1
+        operstatus: up
+        speed: '1500'
+    '3':
+        adminstatus: up
+        description: ''
+        ifindex: '3'
+        mac: 00b846f8be02
+        mtu: '1500'
+        name: GigabitEthernet0/2
+        operstatus: up
+        speed: '1500'
+    '4':
+        adminstatus: up
+        description: ''
+        ifindex: '4'
+        mac: 00b846f8be03
+        mtu: '1500'
+        name: GigabitEthernet0/3
+        operstatus: up
+        speed: '1500'
+    '5':
+        adminstatus: up
+        description: ''
+        ifindex: '5'
+        mac: 00b846f8be04
+        mtu: '1500'
+        name: GigabitEthernet1/0
+        operstatus: up
+        speed: '1500'
+    '6':
+        adminstatus: up
+        description: ''
+        ifindex: '6'
+        mac: 00b846f8be05
+        mtu: '1500'
+        name: GigabitEthernet1/1
+        operstatus: up
+        speed: '1500'
+    '7':
+        adminstatus: up
+        description: ''
+        ifindex: '7'
+        mac: 00b846f8be06
+        mtu: '1500'
+        name: GigabitEthernet1/2
+        operstatus: up
+        speed: '1500'
+    '8':
+        adminstatus: up
+        description: ''
+        ifindex: '8'
+        mac: 00b846f8be07
+        mtu: '1500'
+        name: GigabitEthernet1/3
+        operstatus: up
+        speed: '1500'
+    '9':
+        adminstatus: up
+        description: ''
+        ifindex: '9'
+        mac: 00b846f8be08
+        mtu: '1500'
+        name: GigabitEthernet2/0
+        operstatus: up
+        speed: '1500'
+ansible_net_all_ipv4_addresses:
+- 10.10.5.3
+- 10.10.0.10
+- 10.10.0.6
+ansible_net_all_ipv6_addresses: []
+ansible_net_filesystems:
+- 'flash0:'
+ansible_net_gather_subset:
+- interfaces
+- default
+- hardware
+ansible_net_hostname: main-cs2
+ansible_net_image: flash0:/vios_l2-adventerprisek9-m
+ansible_net_interfaces:
+    GigabitEthernet0/0:
+        bandwidth: 1000000
+        description: MANAGEMENT
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.46f8.be00
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet0/1:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4:
+        -   address: 10.10.0.6
+            subnet: '30'
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.46f8.be01
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: GigabitEthernet
+    GigabitEthernet0/2:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.46f8.be02
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet0/3:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.46f8.be03
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet1/0:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.46f8.be04
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet1/1:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.46f8.be05
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet1/2:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.46f8.be06
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet1/3:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.46f8.be07
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet2/0:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.46f8.be08
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet2/1:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.46f8.be09
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet2/2:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.46f8.be0a
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet2/3:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.46f8.be0b
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet3/0:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.46f8.be0c
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet3/1:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.46f8.be0d
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet3/2:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.46f8.be0e
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet3/3:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.46f8.be0f
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    Vlan100:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4:
+        -   address: 10.10.0.10
+            subnet: '30'
+        lineprotocol: 'up '
+        macaddress: 00b8.46f8.8064
+        mediatype: null
+        mtu: 1500
+        operstatus: up
+        type: Ethernet SVI
+    Vlan5:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4:
+        -   address: 10.10.5.3
+            subnet: '24'
+        lineprotocol: 'up '
+        macaddress: 00b8.46f8.8005
+        mediatype: null
+        mtu: 1500
+        operstatus: up
+        type: Ethernet SVI
+ansible_net_memfree_mb: 362774.36328125
+ansible_net_memtotal_mb: 463428.375
+ansible_net_model: IOSv () processor
+ansible_net_neighbors:
+    'null':
+    -   host: null
+        port: null
+ansible_net_serialnum: 9M2QNSG7IQ2
+ansible_net_version: 15.2(4.0.55)E
+ansible_playbook_python: /usr/bin/python3
+ansible_ssh_pass: automation
+ansible_syscontact: ''
+ansible_sysdescr: "Cisco IOS Software, vios_l2 Software (vios_l2-ADVENTERPRISEK9-M),\
+    \ Version 15.2(4.0.55)E, TEST ENGINEERING ESTG_WEEKLY BUILD, synced to  END_OF_FLO_ISP\r\
+    \nTechnical Support: http://www.cisco.com/techsupport\r\nCopyright (c) 1986-2015\
+    \ by Cisco Systems, Inc.\r\nCo"
+ansible_syslocation: ''
+ansible_sysname: main-cs2.test-corp.com
+ansible_sysobjectid: 1.3.6.1.4.1.9.1
+ansible_sysuptime: '9730880'
+ansible_user: network
+ansible_version:
+    full: 2.4.3.0
+    major: 2
+    minor: 4
+    revision: 3
+    string: 2.4.3.0
+fmt: text
+group_names:
+- ios
+- switch
+groups:
+    all:
+    - main-cs1
+    - main-cs2
+    - remote-cs1
+    - main-r1
+    - main-r2
+    - remote-r1
+    - isp1
+    - isp2
+    ios:
+    - main-r1
+    - main-r2
+    - main-cs1
+    - main-cs2
+    - remote-r1
+    - remote-cs1
+    - isp1
+    - isp2
+    router:
+    - main-r1
+    - main-r2
+    - remote-r1
+    switch:
+    - main-cs1
+    - main-cs2
+    - remote-cs1
+    ungrouped: []
+inventory_dir: /home/chris/network_automation/2.Easy_Wins/ansible
+inventory_file: /home/chris/network_automation/2.Easy_Wins/ansible/hosts
+inventory_hostname: main-cs2
+inventory_hostname_short: main-cs2
+omit: __omit_place_holder__00a611387d619e0fc647d13fa0441957ffbeadf4
+output: all.log
+playbook_dir: /home/chris/network_automation/2.Easy_Wins/ansible
+report: all
+report_template_src_file: templates/all-text.j2
+
+ansible_all_ipv4_addresses:
+- 10.10.0.1
+- 10.42.1.2
+ansible_check_mode: false
+ansible_interfaces:
+    '1':
+        adminstatus: up
+        description: ''
+        ifindex: '1'
+        ipv4:
+        -   address: 10.10.0.1
+            netmask: 255.255.255.252
+        mac: 00b846962f00
+        mtu: '1500'
+        name: GigabitEthernet0/0
+        operstatus: up
+        speed: '1500'
+    '2':
+        adminstatus: up
+        description: ''
+        ifindex: '2'
+        ipv4:
+        -   address: 10.42.1.2
+            netmask: 255.255.255.252
+        mac: 00b846962f01
+        mtu: '1500'
+        name: GigabitEthernet0/1
+        operstatus: up
+        speed: '1500'
+    '3':
+        adminstatus: down
+        description: ''
+        ifindex: '3'
+        mac: 00b846962f02
+        mtu: '1500'
+        name: GigabitEthernet0/2
+        operstatus: down
+        speed: '1500'
+    '4':
+        adminstatus: down
+        description: ''
+        ifindex: '4'
+        mac: 00b846962f03
+        mtu: '1500'
+        name: GigabitEthernet0/3
+        operstatus: down
+        speed: '1500'
+    '5':
+        adminstatus: up
+        description: ''
+        ifindex: '5'
+        mac: ''
+        mtu: '1500'
+        name: Null0
+        operstatus: up
+        speed: '1500'
+ansible_net_all_ipv4_addresses:
+- 10.42.1.2
+- 10.10.0.1
+ansible_net_all_ipv6_addresses: []
+ansible_net_filesystems:
+- 'flash0:'
+ansible_net_gather_subset:
+- hardware
+- interfaces
+- default
+ansible_net_hostname: main-r1
+ansible_net_image: flash0:/vios-adventerprisek9-m
+ansible_net_interfaces:
+    GigabitEthernet0/0:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4:
+        -   address: 10.10.0.1
+            subnet: '30'
+        lineprotocol: 'up '
+        macaddress: 00b8.4696.2f00
+        mediatype: RJ45
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet0/1:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4:
+        -   address: 10.42.1.2
+            subnet: '30'
+        lineprotocol: 'up '
+        macaddress: 00b8.4696.2f01
+        mediatype: RJ45
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet0/2:
+        bandwidth: 1000000
+        description: null
+        duplex: Auto
+        ipv4: []
+        lineprotocol: 'down '
+        macaddress: 00b8.4696.2f02
+        mediatype: RJ45
+        mtu: 1500
+        operstatus: administratively down
+        type: iGbE
+    GigabitEthernet0/3:
+        bandwidth: 1000000
+        description: null
+        duplex: Auto
+        ipv4: []
+        lineprotocol: 'down '
+        macaddress: 00b8.4696.2f03
+        mediatype: RJ45
+        mtu: 1500
+        operstatus: administratively down
+        type: iGbE
+ansible_net_memfree_mb: 245972.49609375
+ansible_net_memtotal_mb: 315698.53125
+ansible_net_model: IOSv
+ansible_net_neighbors:
+    'null':
+    -   host: null
+        port: null
+ansible_net_serialnum: 9B6OH0WKJMOIJRDJMTNMV
+ansible_net_version: 15.5(3)M
+ansible_playbook_python: /usr/bin/python3
+ansible_ssh_pass: automation
+ansible_syscontact: admin@lab.local
+ansible_sysdescr: "Cisco IOS Software, IOSv Software (VIOS-ADVENTERPRISEK9-M), Version\
+    \ 15.5(3)M, RELEASE SOFTWARE (fc1)\r\nTechnical Support: http://www.cisco.com/techsupport\r\
+    \nCopyright (c) 1986-2015 by Cisco Systems, Inc.\r\nCompiled Wed 22-Jul-15 23:04\
+    \ by prod_rel_team"
+ansible_syslocation: ''
+ansible_sysname: main-r1.test-corp.com
+ansible_sysobjectid: 1.3.6.1.4.1.9.1.1041
+ansible_sysuptime: '172998790'
+ansible_user: network
+ansible_version:
+    full: 2.4.3.0
+    major: 2
+    minor: 4
+    revision: 3
+    string: 2.4.3.0
+fmt: text
+group_names:
+- ios
+- router
+groups:
+    all:
+    - main-cs1
+    - main-cs2
+    - remote-cs1
+    - main-r1
+    - main-r2
+    - remote-r1
+    - isp1
+    - isp2
+    ios:
+    - main-r1
+    - main-r2
+    - main-cs1
+    - main-cs2
+    - remote-r1
+    - remote-cs1
+    - isp1
+    - isp2
+    router:
+    - main-r1
+    - main-r2
+    - remote-r1
+    switch:
+    - main-cs1
+    - main-cs2
+    - remote-cs1
+    ungrouped: []
+inventory_dir: /home/chris/network_automation/2.Easy_Wins/ansible
+inventory_file: /home/chris/network_automation/2.Easy_Wins/ansible/hosts
+inventory_hostname: main-r1
+inventory_hostname_short: main-r1
+omit: __omit_place_holder__00a611387d619e0fc647d13fa0441957ffbeadf4
+output: all.log
+playbook_dir: /home/chris/network_automation/2.Easy_Wins/ansible
+report: all
+report_template_src_file: templates/all-text.j2
+
+ansible_all_ipv4_addresses:
+- 10.10.0.5
+- 10.42.2.2
+ansible_check_mode: false
+ansible_interfaces:
+    '1':
+        adminstatus: up
+        description: ''
+        ifindex: '1'
+        ipv4:
+        -   address: 10.10.0.5
+            netmask: 255.255.255.252
+        mac: 00b846eadc00
+        mtu: '1500'
+        name: GigabitEthernet0/0
+        operstatus: up
+        speed: '1500'
+    '2':
+        adminstatus: up
+        description: ''
+        ifindex: '2'
+        ipv4:
+        -   address: 10.42.2.2
+            netmask: 255.255.255.252
+        mac: 00b846eadc01
+        mtu: '1500'
+        name: GigabitEthernet0/1
+        operstatus: up
+        speed: '1500'
+    '3':
+        adminstatus: down
+        description: ''
+        ifindex: '3'
+        mac: 00b846eadc02
+        mtu: '1500'
+        name: GigabitEthernet0/2
+        operstatus: down
+        speed: '1500'
+    '4':
+        adminstatus: down
+        description: ''
+        ifindex: '4'
+        mac: 00b846eadc03
+        mtu: '1500'
+        name: GigabitEthernet0/3
+        operstatus: down
+        speed: '1500'
+    '5':
+        adminstatus: up
+        description: ''
+        ifindex: '5'
+        mac: ''
+        mtu: '1500'
+        name: Null0
+        operstatus: up
+        speed: '1500'
+ansible_net_all_ipv4_addresses:
+- 10.10.0.5
+- 10.42.2.2
+ansible_net_all_ipv6_addresses: []
+ansible_net_filesystems:
+- 'flash0:'
+ansible_net_gather_subset:
+- default
+- hardware
+- interfaces
+ansible_net_hostname: main-r2
+ansible_net_image: flash0:/vios-adventerprisek9-m
+ansible_net_interfaces:
+    GigabitEthernet0/0:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4:
+        -   address: 10.10.0.5
+            subnet: '30'
+        lineprotocol: 'up '
+        macaddress: 00b8.46ea.dc00
+        mediatype: RJ45
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet0/1:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4:
+        -   address: 10.42.2.2
+            subnet: '30'
+        lineprotocol: 'up '
+        macaddress: 00b8.46ea.dc01
+        mediatype: RJ45
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet0/2:
+        bandwidth: 1000000
+        description: null
+        duplex: Auto
+        ipv4: []
+        lineprotocol: 'down '
+        macaddress: 00b8.46ea.dc02
+        mediatype: RJ45
+        mtu: 1500
+        operstatus: administratively down
+        type: iGbE
+    GigabitEthernet0/3:
+        bandwidth: 1000000
+        description: null
+        duplex: Auto
+        ipv4: []
+        lineprotocol: 'down '
+        macaddress: 00b8.46ea.dc03
+        mediatype: RJ45
+        mtu: 1500
+        operstatus: administratively down
+        type: iGbE
+ansible_net_memfree_mb: 245510.16015625
+ansible_net_memtotal_mb: 315698.53125
+ansible_net_model: IOSv
+ansible_net_neighbors:
+    'null':
+    -   host: null
+        port: null
+ansible_net_serialnum: 98URKZRMPVGJ6ZNASPMIK
+ansible_net_version: 15.5(3)M
+ansible_playbook_python: /usr/bin/python3
+ansible_ssh_pass: automation
+ansible_syscontact: admin@lab.local
+ansible_sysdescr: "Cisco IOS Software, IOSv Software (VIOS-ADVENTERPRISEK9-M), Version\
+    \ 15.5(3)M, RELEASE SOFTWARE (fc1)\r\nTechnical Support: http://www.cisco.com/techsupport\r\
+    \nCopyright (c) 1986-2015 by Cisco Systems, Inc.\r\nCompiled Wed 22-Jul-15 23:04\
+    \ by prod_rel_team"
+ansible_syslocation: ''
+ansible_sysname: main-r2.test-corp.com
+ansible_sysobjectid: 1.3.6.1.4.1.9.1.1041
+ansible_sysuptime: '172941502'
+ansible_user: network
+ansible_version:
+    full: 2.4.3.0
+    major: 2
+    minor: 4
+    revision: 3
+    string: 2.4.3.0
+fmt: text
+group_names:
+- ios
+- router
+groups:
+    all:
+    - main-cs1
+    - main-cs2
+    - remote-cs1
+    - main-r1
+    - main-r2
+    - remote-r1
+    - isp1
+    - isp2
+    ios:
+    - main-r1
+    - main-r2
+    - main-cs1
+    - main-cs2
+    - remote-r1
+    - remote-cs1
+    - isp1
+    - isp2
+    router:
+    - main-r1
+    - main-r2
+    - remote-r1
+    switch:
+    - main-cs1
+    - main-cs2
+    - remote-cs1
+    ungrouped: []
+inventory_dir: /home/chris/network_automation/2.Easy_Wins/ansible
+inventory_file: /home/chris/network_automation/2.Easy_Wins/ansible/hosts
+inventory_hostname: main-r2
+inventory_hostname_short: main-r2
+omit: __omit_place_holder__00a611387d619e0fc647d13fa0441957ffbeadf4
+output: all.log
+playbook_dir: /home/chris/network_automation/2.Easy_Wins/ansible
+report: all
+report_template_src_file: templates/all-text.j2
+
+ansible_all_ipv4_addresses:
+- 10.10.16.1
+ansible_check_mode: false
+ansible_interfaces:
+    '1':
+        adminstatus: up
+        description: ''
+        ifindex: '1'
+        ipv4:
+        -   address: 10.10.16.1
+            netmask: 255.255.255.252
+        mac: 00b846199300
+        mtu: '1500'
+        name: GigabitEthernet0/0
+        operstatus: up
+        speed: '1500'
+    '10':
+        adminstatus: up
+        description: ''
+        ifindex: '10'
+        mac: 00b846199309
+        mtu: '1500'
+        name: GigabitEthernet2/1
+        operstatus: up
+        speed: '1500'
+    '11':
+        adminstatus: up
+        description: ''
+        ifindex: '11'
+        mac: 00b84619930a
+        mtu: '1500'
+        name: GigabitEthernet2/2
+        operstatus: up
+        speed: '1500'
+    '12':
+        adminstatus: up
+        description: ''
+        ifindex: '12'
+        mac: 00b84619930b
+        mtu: '1500'
+        name: GigabitEthernet2/3
+        operstatus: up
+        speed: '1500'
+    '13':
+        adminstatus: up
+        description: ''
+        ifindex: '13'
+        mac: 00b84619930c
+        mtu: '1500'
+        name: GigabitEthernet3/0
+        operstatus: up
+        speed: '1500'
+    '14':
+        adminstatus: up
+        description: ''
+        ifindex: '14'
+        mac: 00b84619930d
+        mtu: '1500'
+        name: GigabitEthernet3/1
+        operstatus: up
+        speed: '1500'
+    '15':
+        adminstatus: up
+        description: ''
+        ifindex: '15'
+        mac: 00b84619930e
+        mtu: '1500'
+        name: GigabitEthernet3/2
+        operstatus: up
+        speed: '1500'
+    '16':
+        adminstatus: up
+        description: ''
+        ifindex: '16'
+        mac: 00b84619930f
+        mtu: '1500'
+        name: GigabitEthernet3/3
+        operstatus: up
+        speed: '1500'
+    '17':
+        adminstatus: up
+        description: ''
+        ifindex: '17'
+        mac: ''
+        mtu: '1500'
+        name: Null0
+        operstatus: up
+        speed: '1500'
+    '2':
+        adminstatus: up
+        description: ''
+        ifindex: '2'
+        mac: 00b846199301
+        mtu: '1500'
+        name: GigabitEthernet0/1
+        operstatus: up
+        speed: '1500'
+    '3':
+        adminstatus: up
+        description: ''
+        ifindex: '3'
+        mac: 00b846199302
+        mtu: '1500'
+        name: GigabitEthernet0/2
+        operstatus: up
+        speed: '1500'
+    '4':
+        adminstatus: up
+        description: ''
+        ifindex: '4'
+        mac: 00b846199303
+        mtu: '1500'
+        name: GigabitEthernet0/3
+        operstatus: up
+        speed: '1500'
+    '5':
+        adminstatus: up
+        description: ''
+        ifindex: '5'
+        mac: 00b846199304
+        mtu: '1500'
+        name: GigabitEthernet1/0
+        operstatus: up
+        speed: '1500'
+    '6':
+        adminstatus: up
+        description: ''
+        ifindex: '6'
+        mac: 00b846199305
+        mtu: '1500'
+        name: GigabitEthernet1/1
+        operstatus: up
+        speed: '1500'
+    '7':
+        adminstatus: up
+        description: ''
+        ifindex: '7'
+        mac: 00b846199306
+        mtu: '1500'
+        name: GigabitEthernet1/2
+        operstatus: up
+        speed: '1500'
+    '8':
+        adminstatus: up
+        description: ''
+        ifindex: '8'
+        mac: 00b846199307
+        mtu: '1500'
+        name: GigabitEthernet1/3
+        operstatus: up
+        speed: '1500'
+    '9':
+        adminstatus: up
+        description: ''
+        ifindex: '9'
+        mac: 00b846199308
+        mtu: '1500'
+        name: GigabitEthernet2/0
+        operstatus: up
+        speed: '1500'
+ansible_net_all_ipv4_addresses:
+- 10.10.16.1
+ansible_net_all_ipv6_addresses: []
+ansible_net_filesystems:
+- 'flash0:'
+ansible_net_gather_subset:
+- hardware
+- default
+- interfaces
+ansible_net_hostname: remote-cs1
+ansible_net_image: flash0:/vios_l2-adventerprisek9-m
+ansible_net_interfaces:
+    GigabitEthernet0/0:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4:
+        -   address: 10.10.16.1
+            subnet: '30'
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.4619.9300
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: GigabitEthernet
+    GigabitEthernet0/1:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.4619.9301
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet0/2:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.4619.9302
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet0/3:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.4619.9303
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet1/0:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.4619.9304
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet1/1:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.4619.9305
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet1/2:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.4619.9306
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet1/3:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.4619.9307
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet2/0:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.4619.9308
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet2/1:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.4619.9309
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet2/2:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.4619.930a
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet2/3:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.4619.930b
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet3/0:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.4619.930c
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet3/1:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.4619.930d
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet3/2:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.4619.930e
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+    GigabitEthernet3/3:
+        bandwidth: 1000000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'up (connected) '
+        macaddress: 00b8.4619.930f
+        mediatype: unknown media type
+        mtu: 1500
+        operstatus: up
+        type: iGbE
+ansible_net_memfree_mb: 362774.36328125
+ansible_net_memtotal_mb: 463428.375
+ansible_net_model: IOSv () processor
+ansible_net_neighbors:
+    'null':
+    -   host: null
+        port: null
+ansible_net_serialnum: 9J7DEZLBCT6
+ansible_net_version: 15.2(4.0.55)E
+ansible_playbook_python: /usr/bin/python3
+ansible_ssh_pass: automation
+ansible_syscontact: ''
+ansible_sysdescr: "Cisco IOS Software, vios_l2 Software (vios_l2-ADVENTERPRISEK9-M),\
+    \ Version 15.2(4.0.55)E, TEST ENGINEERING ESTG_WEEKLY BUILD, synced to  END_OF_FLO_ISP\r\
+    \nTechnical Support: http://www.cisco.com/techsupport\r\nCopyright (c) 1986-2015\
+    \ by Cisco Systems, Inc.\r\nCo"
+ansible_syslocation: ''
+ansible_sysname: remote-cs1.test-corp.com
+ansible_sysobjectid: 1.3.6.1.4.1.9.1
+ansible_sysuptime: '10134280'
+ansible_user: network
+ansible_version:
+    full: 2.4.3.0
+    major: 2
+    minor: 4
+    revision: 3
+    string: 2.4.3.0
+fmt: text
+group_names:
+- ios
+- switch
+groups:
+    all:
+    - main-cs1
+    - main-cs2
+    - remote-cs1
+    - main-r1
+    - main-r2
+    - remote-r1
+    - isp1
+    - isp2
+    ios:
+    - main-r1
+    - main-r2
+    - main-cs1
+    - main-cs2
+    - remote-r1
+    - remote-cs1
+    - isp1
+    - isp2
+    router:
+    - main-r1
+    - main-r2
+    - remote-r1
+    switch:
+    - main-cs1
+    - main-cs2
+    - remote-cs1
+    ungrouped: []
+inventory_dir: /home/chris/network_automation/2.Easy_Wins/ansible
+inventory_file: /home/chris/network_automation/2.Easy_Wins/ansible/hosts
+inventory_hostname: remote-cs1
+inventory_hostname_short: remote-cs1
+omit: __omit_place_holder__00a611387d619e0fc647d13fa0441957ffbeadf4
+output: all.log
+playbook_dir: /home/chris/network_automation/2.Easy_Wins/ansible
+report: all
+report_template_src_file: templates/all-text.j2
+
+ansible_all_ipv4_addresses:
+- 10.10.16.2
+- 10.42.1.6
+- 10.42.2.6
+ansible_check_mode: false
+ansible_interfaces:
+    '1':
+        adminstatus: up
+        description: ''
+        ifindex: '1'
+        ipv4:
+        -   address: 10.10.16.2
+            netmask: 255.255.255.252
+        mac: c20307730010
+        mtu: '1500'
+        name: FastEthernet1/0
+        operstatus: up
+        speed: '1500'
+    '2':
+        adminstatus: up
+        description: ''
+        ifindex: '2'
+        ipv4:
+        -   address: 10.42.1.6
+            netmask: 255.255.255.252
+        mac: c20307730000
+        mtu: '1500'
+        name: FastEthernet0/0
+        operstatus: up
+        speed: '1500'
+    '3':
+        adminstatus: up
+        description: ''
+        ifindex: '3'
+        ipv4:
+        -   address: 10.42.2.6
+            netmask: 255.255.255.252
+        mac: c20307730001
+        mtu: '1500'
+        name: FastEthernet0/1
+        operstatus: up
+        speed: '1500'
+    '4':
+        adminstatus: down
+        description: ''
+        ifindex: '4'
+        mac: ''
+        mtu: '1500'
+        name: Serial2/0
+        operstatus: down
+        speed: '1500'
+    '5':
+        adminstatus: down
+        description: ''
+        ifindex: '5'
+        mac: ''
+        mtu: '1500'
+        name: Serial2/1
+        operstatus: down
+        speed: '1500'
+    '6':
+        adminstatus: down
+        description: ''
+        ifindex: '6'
+        mac: ''
+        mtu: '1500'
+        name: Serial2/2
+        operstatus: down
+        speed: '1500'
+    '7':
+        adminstatus: down
+        description: ''
+        ifindex: '7'
+        mac: ''
+        mtu: '1500'
+        name: Serial2/3
+        operstatus: down
+        speed: '1500'
+    '9':
+        adminstatus: up
+        description: ''
+        ifindex: '9'
+        mac: ''
+        mtu: '1500'
+        name: Null0
+        operstatus: up
+        speed: '1500'
+ansible_net_all_ipv4_addresses:
+- 10.42.2.6
+- 10.10.16.2
+- 10.42.1.6
+ansible_net_all_ipv6_addresses: []
+ansible_net_gather_subset:
+- hardware
+- interfaces
+- default
+ansible_net_hostname: remote-r1
+ansible_net_image: tftp://255.255.255.255/unknown
+ansible_net_interfaces:
+    FastEthernet0/0:
+        bandwidth: 10000
+        description: null
+        duplex: null
+        ipv4:
+        -   address: 10.42.1.6
+            subnet: '30'
+        lineprotocol: 'up '
+        macaddress: c203.0773.0000
+        mediatype: null
+        mtu: 1500
+        operstatus: up
+        type: Gt96k FE
+    FastEthernet0/1:
+        bandwidth: 10000
+        description: null
+        duplex: null
+        ipv4:
+        -   address: 10.42.2.6
+            subnet: '30'
+        lineprotocol: 'up '
+        macaddress: c203.0773.0001
+        mediatype: null
+        mtu: 1500
+        operstatus: up
+        type: Gt96k FE
+    FastEthernet1/0:
+        bandwidth: 100000
+        description: null
+        duplex: null
+        ipv4:
+        -   address: 10.10.16.2
+            subnet: '30'
+        lineprotocol: 'up '
+        macaddress: c203.0773.0010
+        mediatype: null
+        mtu: 1500
+        operstatus: up
+        type: AmdFE
+    Serial2/0:
+        bandwidth: 1544
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'down '
+        macaddress: null
+        mediatype: null
+        mtu: 1500
+        operstatus: administratively down
+        type: null
+    Serial2/1:
+        bandwidth: 1544
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'down '
+        macaddress: null
+        mediatype: null
+        mtu: 1500
+        operstatus: administratively down
+        type: null
+    Serial2/2:
+        bandwidth: 1544
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'down '
+        macaddress: null
+        mediatype: null
+        mtu: 1500
+        operstatus: administratively down
+        type: null
+    Serial2/3:
+        bandwidth: 1544
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'down '
+        macaddress: null
+        mediatype: null
+        mtu: 1500
+        operstatus: administratively down
+        type: null
+ansible_net_memfree_mb: 128669.453125
+ansible_net_memtotal_mb: 152412.15625
+ansible_net_model: 3725 (R7000) processor
+ansible_net_serialnum: FTX0945W0MY
+ansible_net_version: 12.4(15)T14
+ansible_playbook_python: /usr/bin/python3
+ansible_ssh_pass: automation
+ansible_syscontact: admin@lab.local
+ansible_sysdescr: "Cisco IOS Software, 3700 Software (C3725-ADVENTERPRISEK9-M), Version\
+    \ 12.4(15)T14, RELEASE SOFTWARE (fc2)\r\nTechnical Support: http://www.cisco.com/techsupport\r\
+    \nCopyright (c) 1986-2010 by Cisco Systems, Inc.\r\nCompiled Tue 17-Aug-10 12:08\
+    \ by prod_rel_team"
+ansible_syslocation: ''
+ansible_sysname: remote-r1.test-corp.com
+ansible_sysobjectid: 1.3.6.1.4.1.9.1.122
+ansible_sysuptime: '174095920'
+ansible_user: network
+ansible_version:
+    full: 2.4.3.0
+    major: 2
+    minor: 4
+    revision: 3
+    string: 2.4.3.0
+fmt: text
+group_names:
+- ios
+- router
+groups:
+    all:
+    - main-cs1
+    - main-cs2
+    - remote-cs1
+    - main-r1
+    - main-r2
+    - remote-r1
+    - isp1
+    - isp2
+    ios:
+    - main-r1
+    - main-r2
+    - main-cs1
+    - main-cs2
+    - remote-r1
+    - remote-cs1
+    - isp1
+    - isp2
+    router:
+    - main-r1
+    - main-r2
+    - remote-r1
+    switch:
+    - main-cs1
+    - main-cs2
+    - remote-cs1
+    ungrouped: []
+inventory_dir: /home/chris/network_automation/2.Easy_Wins/ansible
+inventory_file: /home/chris/network_automation/2.Easy_Wins/ansible/hosts
+inventory_hostname: remote-r1
+inventory_hostname_short: remote-r1
+omit: __omit_place_holder__00a611387d619e0fc647d13fa0441957ffbeadf4
+output: all.log
+playbook_dir: /home/chris/network_automation/2.Easy_Wins/ansible
+report: all
+report_template_src_file: templates/all-text.j2
+

@@ -20,7 +20,7 @@ Read the docs!
 
 I made a simple napalm-ansible playbook using napalm_get_facts and could not get it to work. After reading the napalm-ansible documentation I found out that my problem was easily solved by running napalm-ansible at the cli before trying to write any playbooks. I had some missing defaults in my ansible.cfg file. 
 
-I started with examples from https://github.com/ipspace/ansible-examples. My goal was to add the cisco snmp string to all of my devices AND I wanted to do it from a template as some time back I had been playing around with python and jinja2 templates. I thought I could incorporate some of that work into this project. 
+I started with examples from https://github.com/ipspace/ansible-examples. One goal was to add the cisco snmp string to all of my devices. I wanted to do it from a template as some time back I had been testing python with jinja2 templates. I thought I could incorporate some of that work into this project. 
 
 Initially, I ran Ivan's code to "deploy" a basic snmp community string. Running the uptime report using snmp worked. 
 

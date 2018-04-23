@@ -22,7 +22,7 @@ I made a simple napalm-ansible playbook using napalm_get_facts and could not get
 
 I started with examples from https://github.com/ipspace/ansible-examples. One goal was to add the cisco snmp string to all of my devices. I wanted to do it from a template as some time back I had been testing python with jinja2 templates. I thought I could incorporate some of that work into this project. 
 
-Initially, I ran Ivan's code to "deploy" a basic snmp community string. Running the uptime report using snmp worked. 
+Initially, I ran Ivan's code to "deploy" a basic snmp community string. 
 
 I then tried using my jinja2 template and my variable file as input to Ivan's deployConfig.yml file. I had some issues with passing variables to the jinja2 template and learned about debugging variables from this excercise. 
 

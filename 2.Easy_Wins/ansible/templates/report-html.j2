@@ -1,0 +1,23 @@
+<html>
+  <head> </head>
+    <body>
+      <table>
+        <tr><td>HOSTNAME</td><td>VERSION</td><td>MODEL</td><td>SERIAL</td><td>UPTIME</td</tr>
+{% for host,facts in allhosts|dictsort %}
+{{'%-15s %-20s %-22s %-25s %-8s'|format(facts.inventory_hostname|trim,facts.ansible_net_version|trim,facts.ansible_net_model|trim,facts.ansible_net_serialnum|trim,facts.ansible_sysuptime)}}
+{% endfor %}
+
+{% for host,facts in allhosts|dictsort %}
+
+{{facts.inventory_hostname}}
+{% for interface,interface_info in facts.ansible_net_interfaces|dictsort %}
+{{interface}}
+  description {{interface_info.description|trim}}
+  {% for ip_address in interface_info.ipv4 %}
+  ip address {{ip_address.address}}/{{ip_address.subnet}}
+  Status {{interface_info.operstatus}}/{{interface_info.lineprotocol}}
+  {% endfor %}
+
+{% endfor %}
+
+{% endfor %}

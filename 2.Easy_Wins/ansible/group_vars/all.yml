@@ -1,0 +1,5 @@
+allhosts: "{{hostvars}}"
+results: "{{inventory_dir}}/results"
+snmp_communities:
+  - {name: "azxrgb", acl: "", type: "ro"}
+  - {name: "private1", acl: "99", type: "rw"}

@@ -1,0 +1,14 @@
+SNMP COMMUNITY AUDIT REPORT
+===========================
+isp1
+  Extra: cisco
+isp2
+  Extra: cisco
+main-cs1
+main-cs2
+main-r1
+main-r2
+  Extra: cisco
+  Missing: azxrgb
+remote-cs1
+remote-r1

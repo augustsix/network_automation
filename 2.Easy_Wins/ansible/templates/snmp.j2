@@ -1,4 +1,4 @@
 {#  SNMP  #}
-{% for community in communities %}
+{% for community in snmp_communities %}
 snmp-server community {{ community.name }} {{community.type|upper}} {{ community.acl }}
 {% endfor %}

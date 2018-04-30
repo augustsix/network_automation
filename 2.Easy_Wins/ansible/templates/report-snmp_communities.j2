@@ -1,0 +1,15 @@
+SNMP COMMUNITY AUDIT REPORT
+===========================
+{% for host,facts in allhosts|dictsort %}
+{{ facts.inventory_hostname }}
+{% if hostvars[facts.inventory_hostname].extra_community_list is defined %}
+{% for extra_community in hostvars[facts.inventory_hostname].extra_community_list %}
+  Extra: {{ extra_community }}
+{% endfor %}
+{% endif %}
+{% if hostvars[facts.inventory_hostname].missing_community_list is defined %}
+{% for missing_community in hostvars[facts.inventory_hostname].missing_community_list %}
+  Missing: {{ missing_community }}
+{% endfor %}
+{% endif %}
+{% endfor %}

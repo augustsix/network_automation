@@ -1,0 +1,42 @@
+#
+# Enable or disable logging of commands executed on Cisco IOS devices
+#
+---
+# - name: Deploy a configuration snippet on Cisco IOS routers
+- hosts: all
+  vars:
+    current_community_list: []
+    missing_community_list: []
+    extra_community_list: []
+  gather_facts: false
+  tasks: 
+    - name: show snmp community
+      register: command_output
+      ios_command:
+        commands: "show run | inc community"
+# get list of community strings with custom python filter
+#    - name: get community list
+#      set_fact:
+#        current_community_list: "{{command_output.stdout_lines[0]|find_communities}}"
+# get list of community strings by iterating stdout list and extracting in playbook.
+    - name: get community list
+      set_fact:
+        current_community_list: "{{current_community_list + [item.split()[2]]}}"
+      with_items: "{{command_output.stdout_lines[0]}}"
+# what extra and missing community strings
+    - name: get list of extra community strings
+      set_fact:
+        extra_community_list: "{{ current_community_list | difference(snmp_communities | map(attribute='name') | list) }}"
+    - name: get list of missing community strings
+      set_fact:
+        missing_community_list: "{{ snmp_communities | map(attribute='name') | list | difference(current_community_list) }}"
+    - name: audit report on extra and missing sommunity strings
+      template:
+        src:  "{{'templates/report-snmp_communities.j2'}}"
+        dest: "{{results}}/{{output|default('snmp_communities.log')}}"
+    - name: debug extra
+      debug: 
+        var: extra_community_list
+    - name: debug missing
+      debug: 
+        var: missing_community_list

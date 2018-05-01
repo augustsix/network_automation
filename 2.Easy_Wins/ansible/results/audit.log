@@ -1,0 +1,15 @@
+AUDIT REPORT
+===========================
+isp1
+  Extra Community String: cisco
+isp2
+  Extra Community String: cisco
+main-cs1
+main-cs2
+  Hostname configured as: main-cs0002. It should be main-cs2
+main-r1
+main-r2
+  Extra Community String: cisco
+  Missing Community String: azxrgb
+remote-cs1
+remote-r1

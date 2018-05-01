@@ -1,15 +1,18 @@
-SNMP COMMUNITY AUDIT REPORT
+AUDIT REPORT
 ===========================
 {% for host,facts in allhosts|dictsort %}
 {{ facts.inventory_hostname }}
+{% if facts.inventory_hostname != hostvars[facts.inventory_hostname].ansible_net_hostname %}
+  Hostname configured as: {{hostvars[facts.inventory_hostname].ansible_net_hostname}}. It should be {{facts.inventory_hostname}}
+{% endif %}
 {% if hostvars[facts.inventory_hostname].extra_community_list is defined %}
 {% for extra_community in hostvars[facts.inventory_hostname].extra_community_list %}
-  Extra: {{ extra_community }}
+  Extra Community String: {{ extra_community }}
 {% endfor %}
 {% endif %}
 {% if hostvars[facts.inventory_hostname].missing_community_list is defined %}
 {% for missing_community in hostvars[facts.inventory_hostname].missing_community_list %}
-  Missing: {{ missing_community }}
+  Missing Community String: {{ missing_community }}
 {% endfor %}
 {% endif %}
 {% endfor %}

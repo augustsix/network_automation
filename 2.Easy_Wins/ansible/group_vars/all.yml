@@ -3,3 +3,14 @@ results: "{{inventory_dir}}/results"
 snmp_communities:
   - {name: "azxrgb", acl: "", type: "ro"}
   - {name: "private1", acl: "99", type: "rw"}
+ntp_servers:
+  - "ntp1.test-corp.com"
+  - "ntp2.test-corp.com"
+isp_ntp_servers:
+  - "0.pool.ntp.org"
+  - "1.pool.ntp.org"
+syslog_servers:
+  - "syslog1.test-corp.com"
+  - "syslog2.test-corp.com"
+encrypted_passwords: true
+

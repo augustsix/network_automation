@@ -9,7 +9,7 @@ router bgp {{ config['bgp_as'] }}
  neighbor {{ neighbor.address }} activate
  neighbor {{ neighbor.address }} send-community
 {% if config['bgp_as'] == neighbor.as %}
- neighbor 10.126.1.2 next-hop-self
+ neighbor {{ neighbor.address }} next-hop-self
 {% endif %}
 {% if neighbor.route_map_in %}
  neighbor {{ neighbor.address }} route-map {{ neighbor.name|upper }}_IN in
